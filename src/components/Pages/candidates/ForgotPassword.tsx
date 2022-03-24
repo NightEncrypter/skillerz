@@ -1,6 +1,9 @@
 import { Icon } from "@iconify/react";
 
+import { useNavigate } from "react-router-dom";
+
 const ForgotPassword = () => {
+  const navigation = useNavigate();
   return (
     <div className="px-8 bg-[#F4FAFF]  py-2 h-full sm:min-h-0 min-h-screen ">
       {/* <div className=" flex justify-center w-full"> */}
@@ -57,8 +60,11 @@ const ForgotPassword = () => {
             </button>
           </div>
 
-          <button className="w-full  flex justify-center mt-10 bg-[#03C8A4] rounded-lg text-white py-[0.4rem] items-center ">
-            <Icon icon="ep:back" fontSize={17} className="bg-transparent" />{" "}
+          <button
+            className="w-full  flex justify-center mt-10 bg-[#03C8A4] rounded-lg text-white py-[0.4rem] items-center"
+            onClick={() => navigation(-1)}
+          >
+            <Icon icon="ep:back" fontSize={17} className="bg-transparent" />
             <span className="inline-block ml-3"> Back</span>
           </button>
         </div>

@@ -1,5 +1,6 @@
-import React from "react";
 import { Icon } from "@iconify/react";
+import { Link } from "react-router-dom";
+import LogoSvg from "../../svgs/logoSvg";
 const CandidateLogin = () => {
   return (
     <div className="px-8 bg-[#F4FAFF]  py-4 h-full sm:min-h-0 min-h-screen ">
@@ -12,7 +13,9 @@ const CandidateLogin = () => {
           get login for new updates
         </div>
       </h2>
-      <svg
+      <LogoSvg height={"80"} />
+
+      {/* <svg
         height="80"
         viewBox="0 0 155 124"
         className="w-full mt-4 "
@@ -24,8 +27,7 @@ const CandidateLogin = () => {
           d="M115.913 28.3044L149.763 93.0001H82.0628L115.913 28.3044Z"
           fill="#6B00F2"
         />
-      </svg>
-
+      </svg> */}
       <div className=" flex flex-col justify-center items-center  gap-2 ">
         <div className="w-full m ">
           <div className="flex flex-col gap-5 mb-5">
@@ -53,9 +55,12 @@ const CandidateLogin = () => {
                 {" "}
                 forgot password ?
               </span>{" "}
-              <span className="capitalize  text-[0.80rem] font-semibold tracking-wide text-second">
+              <a
+                href="/candidates/forgot_password"
+                className="capitalize  text-[0.80rem] font-semibold tracking-wide text-second"
+              >
                 Reset
-              </span>{" "}
+              </a>{" "}
             </p>
             <div className="flex items-center gap-6 my-4">
               <div className="w-full h-[0.2px] bg-[#9DCDFF]"></div>
@@ -64,13 +69,13 @@ const CandidateLogin = () => {
             </div>
 
             {/* SOCIAL BUTTONS */}
-            <div className="flex flex-col gap-5">
-              <button className=" w-full rounded-2xl     text-sm flex   border-[0.5px] border-google  items-center ">
-                <div className="bg-white mx-2  ">
+            <div className="flex flex-col gap-5 ">
+              <button className=" bg-white w-full rounded-2xl     text-sm flex     items-center ">
+                <div className=" p-[0.35rem] px-4 border_with_boxshadow bg-white rounded-l-2xl google-border   ">
                   <Icon
                     icon="flat-color-icons:google"
                     fontSize={27}
-                    className="bg-transparent"
+                    // className="bg-green"
                   />{" "}
                 </div>
                 <div className="bg-google py-[9px]  w-full h-full rounded-r-2xl ">
@@ -80,8 +85,8 @@ const CandidateLogin = () => {
                 </div>
               </button>
               {/* Github icon */}
-              <button className=" w-full rounded-2xl     text-sm flex   border-[0.5px] border-gray-800  items-center ">
-                <div className="bg-white mx-2  ">
+              <button className=" w-full rounded-2xl     text-sm flex      items-center ">
+                <div className=" p-[0.35rem] px-4 bg-white rounded-l-2xl github-border   ">
                   <Icon
                     icon="logos:github-icon"
                     fontSize={27}
@@ -94,13 +99,9 @@ const CandidateLogin = () => {
                   </span>
                 </div>
               </button>
-              <button className=" w-full rounded-2xl    text-sm flex   border-[0.5px] border-linked-in  items-center ">
-                <div className="bg-white mx-2  ">
-                  <Icon
-                    icon="logos:linkedin-icon"
-                    fontSize={27}
-                    className="bg-transparent"
-                  />{" "}
+              <button className=" w-full rounded-2xl    text-sm flex       bg-white ">
+                <div className=" p-[0.35rem] px-4 bg-white rounded-l-2xl linkedin-border   ">
+                  <Icon icon="logos:linkedin-icon" fontSize={27} className="" />{" "}
                 </div>
                 <div className="bg-linked-in py-[9px]  w-full h-full rounded-r-2xl ">
                   <span className="text-white  tracking-wider font-light capitalize text-xs">
@@ -113,16 +114,16 @@ const CandidateLogin = () => {
             {/* Create new Account */}
             <p className="flex gap-1 w-full justify-center mt-3 ">
               {" "}
-              <span className="capitalize text-[#5A5A5A] text-xs font-semibold tracking-wide">
+              <span className="capitalize text-[#5A5A5A] text-[0.7rem] font-semibold tracking-wide">
                 {" "}
                 Don't have an account?
               </span>{" "}
-              <a
-                href="/candidates/email_verification"
-                className="capitalize  text-xs font-semibold tracking-wide text-second"
+              <Link
+                to="/candidates/email_verification"
+                className="capitalize   font-semibold tracking-wide text-[0.7rem] text-second"
               >
                 Create a new account
-              </a>{" "}
+              </Link>{" "}
             </p>
           </div>
         </div>

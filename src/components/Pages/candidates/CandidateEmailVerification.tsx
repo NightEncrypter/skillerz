@@ -1,12 +1,17 @@
 import { Icon } from "@iconify/react";
 import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const CandidateEmailVerification = () => {
   const [openModal, setModal] = useState<boolean>(false);
   const [toggle, setToggle] = useState<boolean>(false);
+  const navigation = useNavigate();
 
   const submitEmail = () => {
     setModal((prev) => !prev);
+    if (openModal) {
+      navigation("/candidates/set_password");
+    }
   };
   return (
     <>
@@ -60,12 +65,12 @@ const CandidateEmailVerification = () => {
                   {" "}
                   Already have an account?
                 </span>{" "}
-                <a
-                  href="/candidates/login"
+                <Link
+                  to="/candidates/login"
                   className="  text-xs font-semibold tracking-wide text-second"
                 >
                   Login
-                </a>{" "}
+                </Link>{" "}
               </p>
               <div className="flex items-center gap-6 mt-8">
                 <div className="w-full h-[0.2px] bg-[#9DCDFF]"></div>
@@ -74,13 +79,13 @@ const CandidateEmailVerification = () => {
               </div>
 
               {/* SOCIAL BUTTONS */}
-              <div className="flex flex-col gap-5 mt-8">
-                <button className=" w-full rounded-2xl     text-sm flex   border-[0.5px] border-google  items-center ">
-                  <div className="bg-white mx-2  ">
+              <div className="flex flex-col gap-5 ">
+                <button className=" bg-white w-full rounded-2xl     text-sm flex     items-center ">
+                  <div className=" p-[0.35rem] px-4 border_with_boxshadow bg-white rounded-l-2xl google-border   ">
                     <Icon
                       icon="flat-color-icons:google"
                       fontSize={27}
-                      className="bg-transparent"
+                      // className="bg-green"
                     />{" "}
                   </div>
                   <div className="bg-google py-[9px]  w-full h-full rounded-r-2xl ">
@@ -90,8 +95,8 @@ const CandidateEmailVerification = () => {
                   </div>
                 </button>
                 {/* Github icon */}
-                <button className=" w-full rounded-2xl     text-sm flex   border-[0.5px] border-gray-800  items-center ">
-                  <div className="bg-white mx-2  ">
+                <button className=" w-full rounded-2xl     text-sm flex      items-center ">
+                  <div className=" p-[0.35rem] px-4 bg-white rounded-l-2xl github-border   ">
                     <Icon
                       icon="logos:github-icon"
                       fontSize={27}
@@ -104,12 +109,12 @@ const CandidateEmailVerification = () => {
                     </span>
                   </div>
                 </button>
-                <button className=" w-full rounded-2xl    text-sm flex   border-[0.5px] border-linked-in  items-center ">
-                  <div className="bg-white mx-2  ">
+                <button className=" w-full rounded-2xl    text-sm flex       bg-white ">
+                  <div className=" p-[0.35rem] px-4 bg-white rounded-l-2xl linkedin-border   ">
                     <Icon
                       icon="logos:linkedin-icon"
                       fontSize={27}
-                      className="bg-transparent"
+                      className=""
                     />{" "}
                   </div>
                   <div className="bg-linked-in py-[9px]  w-full h-full rounded-r-2xl ">
