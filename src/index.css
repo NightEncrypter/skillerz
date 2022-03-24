@@ -41,6 +41,9 @@ input:focus {
 .policies-box-shadow {
   box-shadow: 0 -3px 8px 2px rgba(0, 0, 0, 0.3);
 }
+.cookies-box-shadow {
+  box-shadow: 0 -3px 8px 2px rgba(0, 0, 0, 0.1);
+}
 
 .bg-policies {
   background: linear-gradient(
@@ -60,3 +63,25 @@ input:focus {
 .linkedin-border {
   box-shadow: inset 0 0 0 0.7px #004d9d;
 }
+
+.scale-card {
+  @apply duration-200 transition;
+}
+
+.card:hover .scale-card {
+  transform: scale(1.2);
+}
+
+.choose-gradient {
+  background: linear-gradient(90deg, #6b00f2 0%, #0079fa 100%);
+}
+
+#candidate:checked + .card {
+  @apply bg-[#90EEFB];
+}
+#recruiter:checked + .card {
+  @apply bg-[#F2CBFF];
+}
+/* .card:hover .towards-down {
+  @apply mt-4;
+} */

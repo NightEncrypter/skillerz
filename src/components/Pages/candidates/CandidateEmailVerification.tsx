@@ -1,7 +1,7 @@
 import { Icon } from "@iconify/react";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-
+import cn from "classnames";
 const CandidateEmailVerification = () => {
   const [openModal, setModal] = useState<boolean>(false);
   const [toggle, setToggle] = useState<boolean>(false);
@@ -26,21 +26,20 @@ const CandidateEmailVerification = () => {
           </div>
         </h2>
 
-        <svg
-          height="80"
-          viewBox="0 0 155 124"
-          className="w-full my-8 "
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M56.6087 0L105.633 93H7.58413L56.6087 0Z" fill="#00E0FF" />
-          <path
-            d="M115.913 28.3044L149.763 93.0001H82.0628L115.913 28.3044Z"
-            fill="#6B00F2"
-          />
-        </svg>
-
-        <div className=" flex flex-col justify-center items-center  gap-2 ">
+        <div className=" flex flex-col justify-center items-center  gap-2 mt-4 ">
+          <svg
+            height="80"
+            viewBox="0 0 155 124"
+            className="w-full my-8 "
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M56.6087 0L105.633 93H7.58413L56.6087 0Z" fill="#00E0FF" />
+            <path
+              d="M115.913 28.3044L149.763 93.0001H82.0628L115.913 28.3044Z"
+              fill="#6B00F2"
+            />
+          </svg>
           <div className="w-full m ">
             <div className="flex flex-col gap-5 mb-5">
               <input
@@ -79,7 +78,7 @@ const CandidateEmailVerification = () => {
               </div>
 
               {/* SOCIAL BUTTONS */}
-              <div className="flex flex-col gap-5 ">
+              <div className="flex flex-col gap-5 my-4 ">
                 <button className=" bg-white w-full rounded-2xl     text-sm flex     items-center ">
                   <div className=" p-[0.35rem] px-4 border_with_boxshadow bg-white rounded-l-2xl google-border   ">
                     <Icon
@@ -138,23 +137,31 @@ const CandidateEmailVerification = () => {
         } `}
       ></div> */}
       <div
-        className={`fixed bottom-0 policies-box-shadow ${
-          !openModal && "translate-y-[150%] opacity-0 "
-        }  rounded-t-xl bg-policies p-3 pb-5 transition duration-300 opacity-100 flex items-center gap-2 z-[2] `}
+        className={cn(
+          " fixed bottom-0 policies-box-shadow   rounded-t-xl bg-policies p-3 pb-5 transition duration-300 opacity-100 flex items-center gap-2 z-[2] ",
+          {
+            "translate-y-[150%] opacity-0 ": !openModal,
+          }
+        )}
       >
         <button
-          className={`w-[4.7rem] h-6  ${
-            toggle ? "bg-blue-700 shadow-xl" : "bg-blue-900"
-          }  rounded-2xl flex items-center `}
+          className={cn("w-[4.7rem] h-6 rounded-xl", {
+            "bg-blue-700 shadow-xl": toggle,
+            "bg-blue-900": !toggle,
+          })}
           onClick={() => {
             setToggle((prev) => !prev);
             console.log(toggle);
           }}
         >
           <div
-            className={`w-4 h-4 rounded-xl bg-gray-400 transition duration-200 ${
-              toggle ? "ml-auto mr-1 bg-gray-100" : "ml-1 "
-            }`}
+            className={cn(
+              "w-4 h-4 rounded-xl bg-gray-400 transition duration-200",
+              {
+                "ml-auto mr-1 bg-gray-100": toggle,
+                "ml-1": !toggle,
+              }
+            )}
           ></div>
         </button>
         <p className="text-white text-xs tracking-wider font-light">

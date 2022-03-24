@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import LogoSvg from "../../svgs/logoSvg";
 const CandidateLogin = () => {
   return (
-    <div className="px-8 bg-[#F4FAFF]  py-4 h-full sm:min-h-0 min-h-screen ">
+    <div className="px-8 bg-[#F4FAFF]  py-4 h-full sm:min-h-0 min-h-screen  ">
       <h2 className="flex  flex-wrap  ">
         <div className=" font-medium text-[#C623FF] text-3xl tracking-wide w-full  ">
           Let's
@@ -13,8 +13,6 @@ const CandidateLogin = () => {
           get login for new updates
         </div>
       </h2>
-      <LogoSvg height={"80"} />
-
       {/* <svg
         height="80"
         viewBox="0 0 155 124"
@@ -28,7 +26,8 @@ const CandidateLogin = () => {
           fill="#6B00F2"
         />
       </svg> */}
-      <div className=" flex flex-col justify-center items-center  gap-2 ">
+      <div className=" flex flex-col justify-center items-center mt-6    ">
+        <LogoSvg height={"80"} />
         <div className="w-full m ">
           <div className="flex flex-col gap-5 mb-5">
             <input
@@ -57,7 +56,7 @@ const CandidateLogin = () => {
               </span>{" "}
               <a
                 href="/candidates/forgot_password"
-                className="capitalize  text-[0.80rem] font-semibold tracking-wide text-second"
+                className="capitalize  text-xs font-semibold tracking-wide text-second"
               >
                 Reset
               </a>{" "}
@@ -112,17 +111,17 @@ const CandidateLogin = () => {
             </div>
 
             {/* Create new Account */}
-            <p className="flex gap-1 w-full justify-center mt-3 ">
+            <p className="flex  w-full justify-center mt-3 gap-1 ">
               {" "}
-              <span className="capitalize text-[#5A5A5A] text-[0.7rem] font-semibold tracking-wide">
+              <span className="capitalize text-[#5A5A5A] text-xs font-semibold tracking-wide">
                 {" "}
                 Don't have an account?
               </span>{" "}
               <Link
                 to="/candidates/email_verification"
-                className="capitalize   font-semibold tracking-wide text-[0.7rem] text-second"
+                className="capitalize   font-semibold tracking-wide text-xs text-second"
               >
-                Create a new account
+                Create new account
               </Link>{" "}
             </p>
           </div>

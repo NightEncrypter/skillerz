@@ -3,8 +3,10 @@ import Layout from "./components/Layout/Layout";
 import CandidateEmailVerification from "./components/Pages/candidates/CandidateEmailVerification";
 import CandidateLogin from "./components/Pages/candidates/CandidateLogin";
 import CandidateOptions from "./components/Pages/candidates/CandidateOptions";
+import CookiesPolicies from "./components/Pages/candidates/CookiesPolicies";
 import ForgotPassword from "./components/Pages/candidates/ForgotPassword";
 import SetPassword from "./components/Pages/candidates/SetPassword";
+import Choose from "./components/Pages/Choose/Choose";
 
 import Courses from "./components/Pages/Courses";
 import Home from "./components/Pages/Home";
@@ -19,6 +21,10 @@ export const routes: RouteObject[] = [
       {
         index: true,
         element: <Home />,
+      },
+      {
+        element: <Choose />,
+        path: "/choose",
       },
       {
         path: "/candidates/options",
@@ -39,6 +45,10 @@ export const routes: RouteObject[] = [
       {
         path: "/candidates/forgot_password",
         element: <ForgotPassword />,
+      },
+      {
+        path: "/cookies",
+        element: <CookiesPolicies />,
       },
       {
         path: "/courses",

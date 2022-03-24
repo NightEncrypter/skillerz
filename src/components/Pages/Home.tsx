@@ -1,84 +1,58 @@
-import { RootState } from "../../store";
-import { useDispatch, useSelector } from "react-redux";
-import {
-  increment,
-  decrement,
-  incrementByAmount,
-  addUser,
-} from "../../Slices/counterSlice";
-import { ChangeEvent, FormEvent, useEffect, useState } from "react";
+import { Icon } from "@iconify/react";
+import { useState } from "react";
+import cn from "classnames";
+import CookiesLogo from "../svgs/CookiesLogo";
+import LogoSvg from "../svgs/logoSvg";
+import { useNavigate } from "react-router-dom";
 const Home = () => {
-  const dispatch = useDispatch();
-
-  const [user, setUser] = useState<{ name: string; age: number }>({
-    name: "",
-    age: 0,
-  });
-
-  const submitData = (e: FormEvent) => {
-    e.preventDefault();
-
-    // console.log(e.target);
-    // setUser({
-    //   ...user,
-    //     name: e.target,
-    //   age:e.target
-    // });
-
-    console.log(user);
-
-    //   if (user) {
-    dispatch(addUser(user));
-
-    //   }
-  };
-  const handleChanger = (e: ChangeEvent<HTMLInputElement>) => {
-    setUser((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  };
-  const { value, userData } = useSelector((state: RootState) => state.counter);
-
-  useEffect(() => {
-    console.log(userData);
-  }, [userData]);
+  const [openModal, setModal] = useState<boolean>(true);
+  const navigation = useNavigate();
   return (
-    <div>
-      <h2>Home</h2>
-
-      <div>
-        <button onClick={() => dispatch(increment())}>Increment</button>
-        <div>
-          <span>{value}</span>
-        </div>
-        <button onClick={() => dispatch(decrement())}>Decrement</button>
-        <div>
-          <button onClick={() => dispatch(incrementByAmount(7))}>
-            Increment By Amount
-          </button>
-        </div>
+    <>
+      <div className="px-8">
+        <LogoSvg height={"80"} />
       </div>
 
-      <form onSubmit={submitData}>
-        <div>
-          <label htmlFor="">Username</label>
-          <input
-            type="name"
-            value={user.name}
-            name="name"
-            onChange={handleChanger}
-          />
+      {/* Cookies Modal */}
+      <div
+        className={cn(
+          " fixed bottom-0 left-0 right-0  cookies-box-shadow   rounded-t-xl bg-[#FFEDED] p-3 pb-6 transition duration-300 opacity-100 gap-2 z-[2] ",
+          {
+            "translate-y-[150%] opacity-0 ": !openModal,
+          }
+        )}
+      >
+        <CookiesLogo />
+        <p className="text-[#4F2C2C] text-xs tracking-wider text-center ">
+          This website uses cookies to ensure you get the best experience
+        </p>
+        <div className="mt-4 flex justify-around">
+          <button
+            className="bg-[#966A5C] hover:bg-[#755247] transition duration-200 ease-in py-2  w-[9rem] text-xs text-white font-light tracking-wider rounded-2xl"
+            onClick={() => setModal(false)}
+          >
+            Got it
+          </button>
+          <button
+            className="border-[#966A5C] border-[0.3px] w-[9rem] py-2  text-xs text-[#966A5C] bg-white hover:opacity-80  tracking-wider rounded-2xl"
+            onClick={() => navigation("/cookies")}
+          >
+            Learn more
+          </button>
         </div>
-        <div>
-          <label htmlFor="">Age</label>
-          <input
-            type="number"
-            onChange={handleChanger}
-            value={user.age}
-            name="age"
+        {/* <button
+          onClick={() => setModal(false)}
+          className="bg-red-500 w-6 h-6 p-2 rounded-xl"
+        >
+          <Icon
+            icon="bytesize:close"
+            fontSize={9}
+            color={"white"}
+            className="bg-transparent"
           />
-        </div>
-        <input type="submit" value="Submit" />
-      </form>
-    </div>
+        </button> */}
+      </div>
+    </>
   );
 };
 
