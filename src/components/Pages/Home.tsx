@@ -1,4 +1,3 @@
-import { Icon } from "@iconify/react";
 import { useState } from "react";
 import cn from "classnames";
 import CookiesLogo from "../svgs/CookiesLogo";

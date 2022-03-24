@@ -1,5 +1,4 @@
 import CookiepolicyLogo from "../../svgs/CookiepolicyLogo";
-import LogoSvg from "../../svgs/logoSvg";
 import cn from "classnames";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
