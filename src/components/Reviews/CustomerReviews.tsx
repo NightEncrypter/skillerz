@@ -44,13 +44,13 @@ const CustomerReviews = () => {
             <div className="flex gap-2 md:gap-4 items-center justify-end mt-2">
               <a
                 href="https://google.com"
-                className="hover:scale-[1.1] transition w-8 h-8"
+                className="hover:scale-[1.1] transition md:w-8 md:h-8 h-4 w-4"
               >
                 <Icon icon="logos:google-gmail" className="w-full h-full" />
               </a>
               <a
                 href="https://www.facebook.com"
-                className="hover:scale-[1.05] transition w-8 h-8"
+                className="hover:scale-[1.05] transition md:w-8 md:h-8 h-4 w-4"
               >
                 <Icon
                   icon="akar-icons:facebook-fill"
