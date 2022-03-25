@@ -16,63 +16,59 @@ const Home = () => {
   const navigation = useNavigate();
   return (
     <>
-      <div className=" bg-main-light    w-full     ">
-        <div className="min-h-screen bg-main-light ">
-          <header className="sticky top-0 left-0 right-0 bg-main-light flex justify-between items-center px-4 ">
-            <div className="w-[28px] h-[28px] sm:hidden z-50"></div>
-            <LogoSvg height={"60"} />
-            <button
-              onClick={() => setHam((prev) => !prev)}
-              className="transition duration-200"
-            >
-              <Icon
-                fontSize={28}
-                width={34}
-                icon={"ci:menu-alt-02"}
-                color={"#005ECE"}
-              />
-            </button>
-          </header>
+      <div className=" bg-main-light min-h-screen    w-full     ">
+        <header className="sticky top-0 left-0 right-0 bg-main-light flex justify-between items-center px-4 ">
+          <div className="w-[28px] h-[28px] sm:hidden z-50"></div>
+          <LogoSvg height={"60"} />
+          <button
+            onClick={() => setHam((prev) => !prev)}
+            className="transition duration-200"
+          >
+            <Icon
+              fontSize={28}
+              width={34}
+              icon={"ci:menu-alt-02"}
+              color={"#005ECE"}
+            />
+          </button>
+        </header>
 
-          {/* HEADINGS */}
-          <h2 className="px-6 md:px-10 flex  flex-wrap my-6 sm:hidden  ">
-            <div className=" font-medium text-[#C623FF] text-2xl tracking-wide w-full  ">
-              RecruiterX is a
-            </div>
-            <div className=" w-12  "></div>
-            <div className="font-medium  ml-auto ">
-              Candidate Empowerment Platform
-            </div>
-            <div className="font-medium text-[#00D1EE] text-lg tracking-wide w-full break-all  ">
-              designed to flip recruitment table
-            </div>
-          </h2>
-
-          {/* SVG1 */}
-          <HomeLogo1 />
-          <div className="flex justify-center  mb-8 ">
-            <button
-              className=" w-[50%] block main_btn main_btn_color  py-[0.60rem] text-white text-sm  capitalize tracking-widest  "
-              // onClick={redirect_to_login}
-            >
-              Let's give us Try
-            </button>
+        {/* HEADINGS */}
+        <h2 className="px-6 md:px-10 flex  flex-wrap my-6 sm:hidden  ">
+          <div className=" font-medium text-[#C623FF] text-2xl tracking-wide w-full  ">
+            RecruiterX is a
           </div>
-          {/* WIDTH INFO */}
-          <div className="w-full flex gap-3 justify-between items-center p-4 px-4  bg-[#D3E7FF]  mt-10 ">
-            <h4 className="text-sm text-[#0079FA] font-medium  ">300,000+</h4>
-            <div className="flex-1 border-r-[1px] border-l-[1px] border-[#0079FA] self-center px-2  ">
-              <div className="">
-                <h3 className="text-sm text-[#0079FA] font-medium">
-                  1 Million+
-                </h3>
-                <p className="text-xs">Applicants interviewed</p>
-              </div>
+          <div className=" w-12  "></div>
+          <div className="font-medium  ml-auto ">
+            Candidate Empowerment Platform
+          </div>
+          <div className="font-medium text-[#00D1EE] text-lg tracking-wide w-full break-all  ">
+            designed to flip recruitment table
+          </div>
+        </h2>
+
+        {/* SVG1 */}
+        <HomeLogo1 />
+        <div className="flex justify-center  mb-8 ">
+          <button
+            className=" w-[50%] block main_btn main_btn_color  py-[0.60rem] text-white text-sm  capitalize tracking-widest  "
+            // onClick={redirect_to_login}
+          >
+            Let's give us Try
+          </button>
+        </div>
+        {/* WIDTH INFO */}
+        <div className="w-full flex gap-3 justify-between items-center p-4 px-4  bg-[#D3E7FF]  mt-10 ">
+          <h4 className="text-sm text-[#0079FA] font-medium  ">300,000+</h4>
+          <div className="flex-1 border-r-[1px] border-l-[1px] border-[#0079FA] self-center px-2  ">
+            <div className="">
+              <h3 className="text-sm text-[#0079FA] font-medium">1 Million+</h3>
+              <p className="text-xs">Applicants interviewed</p>
             </div>
-            <div className="flex-1">
-              <h3 className="text-sm text-[#0079FA] font-medium">5000+</h3>
-              <p className="text-xs">Hired per month using</p>
-            </div>
+          </div>
+          <div className="flex-1">
+            <h3 className="text-sm text-[#0079FA] font-medium">5000+</h3>
+            <p className="text-xs">Hired per month using</p>
           </div>
         </div>
 
