@@ -35,7 +35,7 @@ const Home = () => {
 
         {/* HEADINGS */}
         <h2 className="px-4 md:px-10 flex  flex-wrap my-6 sm:hidden  ">
-          <div className=" font-medium text-[#C623FF] text-2xl tracking-wide w-full  ">
+          <div className=" font-medium text-[#7C00A7] text-2xl tracking-wide w-full  ">
             RecruiterX is a
           </div>
           <div className=" w-12  "></div>
@@ -49,7 +49,7 @@ const Home = () => {
 
         {/* SVG1 */}
         <HomeLogo1 />
-        <div className="flex justify-center    ">
+        <div className="flex justify-center mt-4    ">
           <button
             className=" w-[50%] block main_btn main_btn_color  py-[0.60rem] text-white text-sm  capitalize tracking-widest  "
             // onClick={redirect_to_login}
