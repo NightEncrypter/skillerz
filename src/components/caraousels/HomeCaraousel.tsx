@@ -7,7 +7,7 @@ import { Icon } from "@iconify/react";
 const HomeCaraousel = () => {
   const arrowStyles: CSSProperties = {
     position: "absolute",
-    zIndex: 2,
+    zIndex: 1,
     top: "calc(50% - 15px)",
     width: 25,
     height: 25,
@@ -51,7 +51,7 @@ const HomeCaraousel = () => {
       }
     >
       {[1, 1, 2, 6, 7, 9].map((v, i) => (
-        <div className="w-full h-40 m-0" key={i}>
+        <div className="w-full h-40 md:h-[20rem] m-0" key={i}>
           <img src={Pic1} alt="" className="w-full h-full object-cover" />
         </div>
       ))}

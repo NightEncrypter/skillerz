@@ -45,10 +45,10 @@ const CustomerReviews = () => {
           </div>
         ))}
       </div>
-      <div className="flex justify-between max-w-[15rem] mx-auto relative z-[1]">
+      <div className="flex justify-between max-w-[14rem] md:max-w-sm  mx-auto relative z-[1]">
         {[1, 2].map((v, i) => (
           <div className="flex flex-col gap-[2px]">
-            {new Array(50).fill(0).map((x, i) => (
+            {new Array(60).fill(0).map((x, i) => (
               <div className="flex gap-[1.2px]">
                 {[1, 2, 3, 4, 5, 6].map((v, i) => (
                   <div className="w-[2px] h-[2px]  bg-blue-300" key={i}></div>
@@ -58,7 +58,7 @@ const CustomerReviews = () => {
           </div>
         ))}
       </div>
-      <div className=" flex flex-col justify-between items-center  relative -top-[5rem] z-[1] ">
+      <div className=" flex flex-col justify-between items-center  relative -top-[5rem] md:-top-[7rem] z-[1] ">
         <Earth />
         <h3 className="text-center tracking-widest mt-3 ">
           We are{" "}

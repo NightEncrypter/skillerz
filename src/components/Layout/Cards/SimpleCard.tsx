@@ -55,7 +55,7 @@ const SimpleCard = () => {
         <h3 className="tracking-wider">We inform all thing in realtime</h3>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 sm:grid-cols-3 gap-5">
+      <div className="grid grid-cols-2 md:grid-cols-3 sm:grid-cols-3 gap-5 ">
         {cards.map((card, i) => (
           <div
             className={`p-3 px-4 shadow-lg hover:shadow-2xl transition duration-200 cursor-pointer rounded-xl flex  flex-col items-center  ${card.bg} `}

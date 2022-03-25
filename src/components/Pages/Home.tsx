@@ -17,19 +17,24 @@ const Home = () => {
   return (
     <>
       <div className="  bg-main-light   w-full     ">
-        <header className="sticky top-0 left-0 right-0 bg-main-light flex justify-between items-center px-6 ">
-          <div className="w-[28px] h-[28px]"></div>
-          <LogoSvg height={"50"} />
+        <header className="sticky top-0 left-0 right-0 bg-main-light flex justify-between items-center px-4 ">
+          <div className="w-[28px] h-[28px] sm:hidden z-50"></div>
+          <LogoSvg height={"60"} />
           <button
             onClick={() => setHam((prev) => !prev)}
             className="transition duration-200"
           >
-            <Icon fontSize={28} icon={"ci:menu-alt-02"} color={"#005ECE"} />
+            <Icon
+              fontSize={28}
+              width={34}
+              icon={"ci:menu-alt-02"}
+              color={"#005ECE"}
+            />
           </button>
         </header>
 
         {/* HEADINGS */}
-        <h2 className="px-6 flex  flex-wrap my-4  ">
+        <h2 className="px-6 md:px-10 flex  flex-wrap my-6 sm:hidden  ">
           <div className=" font-medium text-[#C623FF] text-2xl tracking-wide w-full  ">
             RecruiterX is a
           </div>
@@ -44,9 +49,16 @@ const Home = () => {
 
         {/* SVG1 */}
         <HomeLogo1 />
-
+        <div className="flex justify-center  mb-8 ">
+          <button
+            className=" w-[50%] block main_btn main_btn_color  py-[0.60rem] text-white text-sm  capitalize tracking-widest  "
+            // onClick={redirect_to_login}
+          >
+            Let's give us Try
+          </button>
+        </div>
         {/* WIDTH INFO */}
-        <div className="w-full flex gap-3 justify-between items-center p-2 px-4  bg-[#D3E7FF]  ">
+        <div className="w-full flex gap-3 justify-between items-center p-4 px-4  bg-[#D3E7FF]  ">
           <h4 className="text-sm text-[#0079FA] font-medium  ">300,000+</h4>
           <div className="flex-1 border-r-[1px] border-l-[1px] border-[#0079FA] self-center px-2  ">
             <div className="">
@@ -60,25 +72,14 @@ const Home = () => {
           </div>
         </div>
 
-        <div className=" mt-4">
-          <div className="flex justify-center ">
-            <button
-              className=" w-[70%] block main_btn main_btn_color  py-[0.68rem] text-white text-sm  capitalize tracking-widest  "
-              // onClick={redirect_to_login}
-            >
-              Let's give us Try
-            </button>
-          </div>
-        </div>
-
-        <div className="px-8">
+        <div className="px-8 md:px-12 mt-16">
           <Overviews />
           <CustomerReviews />
         </div>
         <div className="-translate-y-8">
           <HomeCaraousel />
         </div>
-        <div className="px-6">
+        <div className="px-6 md:px-10">
           <SimpleCard />
         </div>
         <Footer />
