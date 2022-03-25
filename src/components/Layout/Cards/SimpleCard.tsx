@@ -58,23 +58,23 @@ const SimpleCard = () => {
       <div className="grid grid-cols-2 md:grid-cols-3 sm:grid-cols-3 gap-5 ">
         {cards.map((card, i) => (
           <div
-            className={`p-3 px-4 shadow-lg hover:shadow-2xl transition duration-200 cursor-pointer rounded-xl flex  flex-col items-center  ${card.bg} `}
+            className={`p-3 px-4  hover:shadow-lg transition duration-200 cursor-pointer rounded-xl flex  flex-col items-center  hover:-translate-y-3 ${card.bg} `}
             key={i}
           >
             {card.icon}
             <h3
-              className={`${card.color} text-[0.6rem] font-medium mb-2 tracking-wider break-words`}
+              className={`${card.color} text-[0.6rem] font-medium mb-2 tracking-wider break-words md:text-base`}
             >
               {card.head}
             </h3>
-            <p className="text-[0.4rem] tracking-wide font-light break-all ">
+            <p className="text-[0.4rem] md:text-xs tracking-wide font-light break-all ">
               Lorem ipsum dolor sit amet consectetur adipisicing elit soluta
               dicta ipsum dolorum sit possimus? voluptatem
             </p>
             <button
               className={` ${
                 i % 2 !== 0 ? "main_btn_color" : "card_btn_color"
-              } block   py-[0.1rem] px-5 text-white text-[0.6rem]  capitalize tracking-widest mt-3 rounded-xl hover:shadow-lg transition-shadow duration-150  `}
+              } block   py-[0.1rem] md:py-2 md:px-8 px-5 text-white md:text-xs text-[0.6rem]  capitalize tracking-widest mt-3 rounded-xl hover:shadow-lg transition-shadow duration-150  `}
               // onClick={redirect_to_login}
             >
               Learn more

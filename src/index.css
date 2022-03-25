@@ -7,11 +7,15 @@
 html {
   font-family: "Poppins", sans-serif;
 }
+/* body {
+  overflow-y: hidden;
+} */
+
 input:focus {
   outline: none;
 }
 .card-shadow {
-  box-shadow: -7px 7px 16px rgba(0, 117, 133, 0.2);
+  box-shadow: -7px 7px 14px rgba(0, 117, 133, 0.1);
 }
 ::-webkit-scrollbar {
   width: 4px;

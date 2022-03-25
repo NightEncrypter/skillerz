@@ -3,16 +3,21 @@ import Smile from "../../assets/img/smile.png";
 import Earth from "../svgs/Earth";
 const CustomerReviews = () => {
   return (
-    <div className="">
-      <h2 className="text-[#0069E7] text-sm mb-8 w-fit border-b-[0.1px] border-blue-300">
+    <div className="md:my-8">
+      <h2 className="text-[#0069E7] text-sm mb-8 w-fit border-b-[0.1px] border-blue-300 md:font-medium md:text-lg">
         Customer Reviews
       </h2>
 
-      <div className="grid grid-cols-2 gap-3 ">
-        {[1, 2].map((b, i) => (
-          <div className="rounded-xl card-shadow  p-4 bg-[#FFFFFF]" key={i}>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5 ">
+        {[1, 2, 3, 4].map((b, i) => (
+          <div
+            className={` ${
+              i <= 1 ? "hidden md:block" : "md:block"
+            } rounded-xl card-shadow  p-4 bg-[#FFFFFF] transition duration-200  hover:-translate-y-2 hover:shadow-md`}
+            key={i}
+          >
             <div className="flex gap-2">
-              <div className="w-8 h-8">
+              <div className="w-8 h-8 hover:scale-[1.1] transition">
                 <img
                   src={Smile}
                   alt=""
@@ -21,25 +26,37 @@ const CustomerReviews = () => {
               </div>
 
               <div className="flex flex-col">
-                <h3 className="text-xs tracking-wide ">Aliya lima</h3>
+                <h3 className="text-xs tracking-wide md:text-sm ">
+                  Aliya lima
+                </h3>
                 <p className="text-[0.6rem] text-[#B9B9B9] ">Web designer</p>
               </div>
             </div>
-            <p className="text-[0.6rem] mt-2  ">
+            <p className="text-[0.6rem] mt-2 md:text-xs ">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae
               eveniet repudiandae, commodi velit quia ipsam dolores hic,
             </p>
-            <div className="flex items-center gap-2 justify-between mt-1 ">
-              <h4 className="font-semibold text-[0.5rem] ">
+            <div className="flex items-center gap-2 justify-between mt-1 md:mt-3 ">
+              <h4 className="font-semibold text-[0.5rem] md:text-sm ">
                 aliyalima124@gmail.com
               </h4>
             </div>
-            <div className="flex gap-2 items-center justify-end mt-2">
-              <a href="https://google.com">
-                <Icon icon="logos:google-gmail" width={16} />
+            <div className="flex gap-2 md:gap-4 items-center justify-end mt-2">
+              <a
+                href="https://google.com"
+                className="hover:scale-[1.1] transition w-8 h-8"
+              >
+                <Icon icon="logos:google-gmail" className="w-full h-full" />
               </a>
-              <a href="https://www.facebook.com">
-                <Icon icon="akar-icons:facebook-fill" color="#1279F3" />
+              <a
+                href="https://www.facebook.com"
+                className="hover:scale-[1.05] transition w-8 h-8"
+              >
+                <Icon
+                  icon="akar-icons:facebook-fill"
+                  color="#1279F3"
+                  className="w-full h-full "
+                />
               </a>
             </div>
           </div>

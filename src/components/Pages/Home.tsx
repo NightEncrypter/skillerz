@@ -1,4 +1,8 @@
-import { useState } from "react";
+import {
+  // useEffect,
+  useRef,
+  useState,
+} from "react";
 import cn from "classnames";
 import CookiesLogo from "../svgs/CookiesLogo";
 import LogoSvg from "../svgs/logoSvg";
@@ -14,9 +18,34 @@ const Home = () => {
   const [openModal, setModal] = useState<boolean>(true);
   const [ham, setHam] = useState<boolean>(true);
   const navigation = useNavigate();
+  const controlScroll = useRef<HTMLDivElement>(null);
+
+  // useEffect(() => {
+  //   if (controlScroll.current) {
+  //     controlScroll.current.addEventListener("scroll", (e) => {
+  //       console.log(e, "scroll");
+  //     });
+  //   }
+  // }, [controlScroll]);
+
+  //   useEffect(() => {
+  //     controlScroll?.current.addEventListener('scroll', onScroll);
+  //     return () => controlScroll.current.removeEventListener('scroll', onScroll);
+  // },[]);
+
+  // const onScroll = () => {
+
+  // }
   return (
     <>
-      <div className=" bg-main-light min-h-screen    w-full     ">
+      <div
+        // onScroll={onScroll}
+        ref={controlScroll}
+        className={cn("bg-main-light min-h-screen     w-full", {
+          "overflow-y-hidden": !ham,
+          "overflow-auto": ham,
+        })}
+      >
         <header className="sticky top-0 left-0 right-0 bg-main-light flex justify-between items-center px-4 ">
           <div className="w-[28px] h-[28px] sm:hidden z-50"></div>
           <LogoSvg height={"60"} />
@@ -98,7 +127,7 @@ const Home = () => {
         <p className="text-[#4F2C2C] text-xs tracking-wider text-center ">
           This website uses cookies to ensure you get the best experience
         </p>
-        <div className="mt-4 flex justify-around">
+        <div className="mt-4 flex gap-4 justify-around  sm:justify-center  ">
           <button
             className="bg-[#966A5C] hover:bg-[#755247] transition duration-200 ease-in py-2  w-[9rem] text-xs text-white font-light tracking-wider rounded-2xl"
             onClick={() => setModal(false)}
@@ -118,8 +147,8 @@ const Home = () => {
       <div
         // onClick={() => setHam(true)}
         className={cn(" transition duration-200 fixed  ", {
-          "-translate-x-full z-[-1] pointer-events-none ": ham,
-          "-translate-x-0  inset-0 w-full bg-[rgba(0,0,0,0.8)] z-[1] pointer-events-auto ":
+          "-translate-x-full z-[-1] pointer-events-none overflow-y-auto ": ham,
+          "-translate-x-0  inset-0 w-full bg-[rgba(0,0,0,0.8)] z-[1] pointer-events-auto overflow-y-hidden ":
             !ham,
         })}
       >
