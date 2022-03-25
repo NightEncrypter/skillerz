@@ -19,6 +19,14 @@ input:focus {
     #0079fa 100%
   );
 }
+.card_btn_color {
+  background: linear-gradient(
+    270deg,
+    #001b37 -11.67%,
+    #750075 49.75%,
+    #c430ff 100%
+  );
+}
 
 .input-shadow {
   box-shadow: 0px 4px 10px rgba(0, 221, 251, 0.1);

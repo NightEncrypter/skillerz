@@ -5,13 +5,15 @@ import LogoSvg from "../svgs/logoSvg";
 import { Link, useNavigate } from "react-router-dom";
 import { Icon } from "@iconify/react";
 import HomeLogo1 from "../svgs/HomeLogo1";
+import Footer from "../Layout/Footer/Footer";
+import SimpleCard from "../Layout/Cards/SimpleCard";
 const Home = () => {
   const [openModal, setModal] = useState<boolean>(true);
   const [ham, setHam] = useState<boolean>(true);
   const navigation = useNavigate();
   return (
     <>
-      <div className=" bg-[#F4FAFF] ">
+      <div className="  bg-[#F4FAFF]   h-full sm:min-h-0 min-h-screen ">
         <div className="flex justify-between items-center px-6 ">
           <div className="w-[28px] h-[28px]"></div>
           <LogoSvg height={"50"} />
@@ -19,15 +21,7 @@ const Home = () => {
             onClick={() => setHam((prev) => !prev)}
             className="transition duration-200"
           >
-            {/* {ham ? ( */}
             <Icon fontSize={28} icon={"ci:menu-alt-02"} color={"#005ECE"} />
-            {/* ) : ( */}
-            {/* // <Icon */}
-            {/* //   fontSize={28}
-              //   icon={"clarity:close-line"}
-              //   color={"#005ECE"}
-              // /> */}
-            {/* )} */}
           </button>
         </div>
 
@@ -46,7 +40,7 @@ const Home = () => {
         </h2>
 
         <HomeLogo1 />
-        <div className="w-full flex justify-between items-center p-2 bg-[#D3E7FF] gap-2">
+        <div className="w-full flex justify-between items-center px-2  bg-[#D3E7FF] ">
           <h4 className="text-sm text-[#0079FA] font-medium">300,000+</h4>
           <div>
             <h3 className="text-sm text-[#0079FA] font-medium">1 Million+</h3>
@@ -68,6 +62,8 @@ const Home = () => {
             </button>
           </div>
         </div>
+        <SimpleCard />
+        <Footer />
       </div>
 
       {/* Cookies Modal */}
