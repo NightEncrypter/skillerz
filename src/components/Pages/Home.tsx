@@ -26,7 +26,7 @@ const Home = () => {
           >
             <Icon
               fontSize={28}
-              width={34}
+              width={32}
               icon={"ci:menu-alt-02"}
               color={"#005ECE"}
             />
@@ -49,7 +49,7 @@ const Home = () => {
 
         {/* SVG1 */}
         <HomeLogo1 />
-        <div className="flex justify-center mt-4   ">
+        <div className="flex justify-center my-4   ">
           <button
             className=" w-[50%] block main_btn main_btn_color  py-[0.60rem] text-white text-sm  capitalize tracking-widest  "
             // onClick={redirect_to_login}
@@ -58,7 +58,7 @@ const Home = () => {
           </button>
         </div>
         {/* WIDTH INFO */}
-        <div className="w-full flex gap-3 justify-between items-center p-4 px-4  bg-[#D3E7FF]  mt-10 ">
+        <div className="w-full flex gap-3 justify-between items-center p-4 px-4  bg-[#D3E7FF]  mt-8 ">
           <h4 className="text-sm text-[#0079FA] font-medium  ">300,000+</h4>
           <div className="flex-1 border-r-[1px] border-l-[1px] border-[#0079FA] self-center px-2  ">
             <div className="">
