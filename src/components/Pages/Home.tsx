@@ -9,6 +9,7 @@ import Footer from "../Layout/Footer/Footer";
 import SimpleCard from "../Layout/Cards/SimpleCard";
 import Overviews from "../Layout/Overviews/Overviews";
 import CustomerReviews from "../Reviews/CustomerReviews";
+import HomeCaraousel from "../caraousels/HomeCaraousel";
 const Home = () => {
   const [openModal, setModal] = useState<boolean>(true);
   const [ham, setHam] = useState<boolean>(true);
@@ -33,11 +34,11 @@ const Home = () => {
             RecruiterX is a
           </div>
           <div className=" w-12  "></div>
-          <div className="font-medium  mr-auto ">
+          <div className="font-medium  ml-auto ">
             Candidate Empowerment Platform
           </div>
-          <div className="font-medium text-[#00D1EE] text-xl tracking-wide w-full  ">
-            <div className=" w-3 h-2   inline-block  "></div>
+          <div className="font-medium text-[#00D1EE] text-lg tracking-wide w-full  ">
+            {/* <div className=" w-3 h-2   inline-block break-all  "></div> */}
             designed to flip recruitment table
           </div>
         </h2>
@@ -46,13 +47,13 @@ const Home = () => {
         <HomeLogo1 />
 
         {/* WIDTH INFO */}
-        <div className="w-full flex justify-between items-center p-2  bg-[#D3E7FF]  ">
-          <h4 className="text-sm text-[#0079FA] font-medium w-[25%]">
-            300,000+
-          </h4>
-          <div className="flex-1">
-            <h3 className="text-sm text-[#0079FA] font-medium">1 Million+</h3>
-            <p className="text-xs">Applicants interviewed</p>
+        <div className="w-full flex gap-3 justify-between items-center p-2 px-4  bg-[#D3E7FF]  ">
+          <h4 className="text-sm text-[#0079FA] font-medium  ">300,000+</h4>
+          <div className="flex-1 border-r-[1px] border-l-[1px] border-[#0079FA] self-center  ">
+            <div>
+              <h3 className="text-sm text-[#0079FA] font-medium">1 Million+</h3>
+              <p className="text-xs">Applicants interviewed</p>
+            </div>
           </div>
           <div className="flex-1">
             <h3 className="text-sm text-[#0079FA] font-medium">5000+</h3>
@@ -60,7 +61,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="px-6 mt-4">
+        <div className="pl-6 mt-4">
           <div className="flex justify-center ">
             <button
               className=" w-[70%] block main_btn main_btn_color  py-[0.68rem] text-white text-sm  capitalize tracking-widest  "
@@ -71,12 +72,16 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="px-6">
+        <div className="px-8">
           <Overviews />
           <CustomerReviews />
+        </div>
+        <div className="-translate-y-8">
+          <HomeCaraousel />
+        </div>
+        <div className="px-6">
           <SimpleCard />
         </div>
-
         <Footer />
       </div>
 

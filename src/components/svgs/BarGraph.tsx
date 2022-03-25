@@ -131,8 +131,8 @@ export const BarGraph = () => {
           y2="95"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#589CEC" />
-          <stop offset="1" stop-color="#2470CA" />
+          <stop stopColor="#589CEC" />
+          <stop offset="1" stopColor="#2470CA" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_116_11"
@@ -142,8 +142,8 @@ export const BarGraph = () => {
           y2="95.5097"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#589CEC" />
-          <stop offset="1" stop-color="#2470CA" />
+          <stop stopColor="#589CEC" />
+          <stop offset="1" stopColor="#2470CA" />
         </linearGradient>
         <linearGradient
           id="paint2_linear_116_11"
@@ -153,8 +153,8 @@ export const BarGraph = () => {
           y2="95"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#589CEC" />
-          <stop offset="1" stop-color="#2470CA" />
+          <stop stopColor="#589CEC" />
+          <stop offset="1" stopColor="#2470CA" />
         </linearGradient>
       </defs>
     </svg>

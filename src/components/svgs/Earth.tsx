@@ -19403,8 +19403,8 @@ const Earth = () => {
           y2="149"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#54A1F2" />
-          <stop offset="1" stop-color="#001E3D" />
+          <stop stopColor="#54A1F2" />
+          <stop offset="1" stopColor="#001E3D" />
         </linearGradient>
       </defs>
     </svg>

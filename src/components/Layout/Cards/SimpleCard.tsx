@@ -44,15 +44,15 @@ const SimpleCard = () => {
     },
   ];
   return (
-    <div className="my-8">
+    <div className="mb-8 ">
       <div className="text-center my-8 mb-10">
-        <h3 className=" mb-1 ">
+        <h3 className=" mb-1 tracking-wider ">
           {" "}
           Why you will{" "}
           <span className="text-[#7C00A7] text-3xl font-medium">love</span>{" "}
           using RecruiterX Hire
         </h3>
-        <h3 className="">We inform all thing in realtime</h3>
+        <h3 className="tracking-wider">We inform all thing in realtime</h3>
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-4 sm:grid-cols-3 gap-5">
@@ -63,20 +63,18 @@ const SimpleCard = () => {
           >
             {card.icon}
             <h3
-              className={`${card.color} text-xs font-medium mb-2 tracking-wider break-words`}
+              className={`${card.color} text-[0.6rem] font-medium mb-2 tracking-wider break-words`}
             >
               {card.head}
             </h3>
-            <p className="text-[0.6rem] tracking-wide font-light break-all ">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Architecto soluta dicta ipsum dolorum sit possimus? Lorem ipsum
-              quam, nulla consequatur minima porro tempore repudiandae, quisquam
-              voluptatem omnis qui voluptate?
+            <p className="text-[0.4rem] tracking-wide font-light break-all ">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit soluta
+              dicta ipsum dolorum sit possimus? voluptatem
             </p>
             <button
               className={` ${
                 i % 2 !== 0 ? "main_btn_color" : "card_btn_color"
-              } block   py-1 px-5 text-white text-xs  capitalize tracking-widest mt-3 rounded-xl hover:shadow-lg transition-shadow duration-150  `}
+              } block   py-[0.1rem] px-5 text-white text-[0.6rem]  capitalize tracking-widest mt-3 rounded-xl hover:shadow-lg transition-shadow duration-150  `}
               // onClick={redirect_to_login}
             >
               Learn more

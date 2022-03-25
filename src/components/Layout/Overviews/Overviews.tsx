@@ -22,11 +22,11 @@ const Overviews = () => {
     },
   ];
   return (
-    <div className=" my-8">
+    <div className=" my-8 md:grid md:grid-cols-3 md:gap-5">
       {/* Card */}
 
       {cards.map((card, i) => (
-        <div className="my-6 bg-white p-6 rounded-xl" key={i}>
+        <div className="my-6 md:my-0 bg-white p-6 rounded-xl" key={i}>
           <h2
             className={`${
               i === 1 ? "text-[#AD00EB]" : "text-[#0073FD]"
