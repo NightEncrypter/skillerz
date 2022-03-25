@@ -34,7 +34,7 @@ const Home = () => {
         </header>
 
         {/* HEADINGS */}
-        <h2 className="px-6 md:px-10 flex  flex-wrap my-6 sm:hidden  ">
+        <h2 className="px-4 md:px-10 flex  flex-wrap my-6 sm:hidden  ">
           <div className=" font-medium text-[#C623FF] text-2xl tracking-wide w-full  ">
             RecruiterX is a
           </div>
