@@ -48,8 +48,8 @@ const Home = () => {
         {/* WIDTH INFO */}
         <div className="w-full flex gap-3 justify-between items-center p-2 px-4  bg-[#D3E7FF]  ">
           <h4 className="text-sm text-[#0079FA] font-medium  ">300,000+</h4>
-          <div className="flex-1 border-r-[1px] border-l-[1px] border-[#0079FA] self-center  ">
-            <div>
+          <div className="flex-1 border-r-[1px] border-l-[1px] border-[#0079FA] self-center px-2  ">
+            <div className="">
               <h3 className="text-sm text-[#0079FA] font-medium">1 Million+</h3>
               <p className="text-xs">Applicants interviewed</p>
             </div>
