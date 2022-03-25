@@ -22,7 +22,7 @@ const Overviews = () => {
     },
   ];
   return (
-    <div className=" my-8 md:grid md:grid-cols-3 md:gap-5">
+    <div className="  md:grid md:grid-cols-3 md:gap-5">
       {/* Card */}
 
       {cards.map((card, i) => (
