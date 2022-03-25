@@ -82,6 +82,23 @@ input:focus {
 #recruiter:checked + .card {
   @apply bg-[#F2CBFF];
 }
-/* .card:hover .towards-down {
-  @apply mt-4;
-} */
+
+.sidebar-gradient {
+  /* background: linear-gradient(
+    168.86deg,
+    #00346b 1.08%,
+    #0079fa 51.57%,
+    #04d5f1 100%
+  ); */
+
+  background: linear-gradient(
+    168.86deg,
+    #6b00f2 1.08%,
+    #0047ff 53.94%,
+    #00e0ff 100%
+  );
+}
+
+.sidebar-link {
+  @apply text-white text-sm font-medium hover:text-blue-300 transition duration-200 tracking-wide w-full block px-2 py-2;
+}

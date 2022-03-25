@@ -2,14 +2,72 @@ import { useState } from "react";
 import cn from "classnames";
 import CookiesLogo from "../svgs/CookiesLogo";
 import LogoSvg from "../svgs/logoSvg";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { Icon } from "@iconify/react";
+import HomeLogo1 from "../svgs/HomeLogo1";
 const Home = () => {
   const [openModal, setModal] = useState<boolean>(true);
+  const [ham, setHam] = useState<boolean>(true);
   const navigation = useNavigate();
   return (
     <>
-      <div className="px-8">
-        <LogoSvg height={"80"} />
+      <div className=" bg-[#F4FAFF] ">
+        <div className="flex justify-between items-center px-6 ">
+          <div className="w-[28px] h-[28px]"></div>
+          <LogoSvg height={"50"} />
+          <button
+            onClick={() => setHam((prev) => !prev)}
+            className="transition duration-200"
+          >
+            {/* {ham ? ( */}
+            <Icon fontSize={28} icon={"ci:menu-alt-02"} color={"#005ECE"} />
+            {/* ) : ( */}
+            {/* // <Icon */}
+            {/* //   fontSize={28}
+              //   icon={"clarity:close-line"}
+              //   color={"#005ECE"}
+              // /> */}
+            {/* )} */}
+          </button>
+        </div>
+
+        <h2 className="px-6 flex  flex-wrap my-4  ">
+          <div className=" font-medium text-[#C623FF] text-2xl tracking-wide w-full  ">
+            RecruiterX is a
+          </div>
+          <div className=" w-12  "></div>
+          <div className="font-medium  mr-auto ">
+            Candidate Empowerment Platform
+          </div>
+          <div className="font-medium text-[#00D1EE] text-xl tracking-wide w-full  ">
+            <div className=" w-3 h-2   inline-block  "></div>
+            designed to flip recruitment table
+          </div>
+        </h2>
+
+        <HomeLogo1 />
+        <div className="w-full flex justify-between items-center p-2 bg-[#D3E7FF] gap-2">
+          <h4 className="text-sm text-[#0079FA] font-medium">300,000+</h4>
+          <div>
+            <h3 className="text-sm text-[#0079FA] font-medium">1 Million+</h3>
+            <p className="text-xs">Applicants interviewed</p>
+          </div>
+          <div>
+            <h3 className="text-sm text-[#0079FA] font-medium">5000+</h3>
+            <p className="text-xs">Hired per month using</p>
+          </div>
+        </div>
+
+        <div className="px-6 mt-4">
+          <div className="flex justify-center ">
+            <button
+              className=" w-[70%] block main_btn main_btn_color  py-[0.68rem] text-white text-sm  capitalize tracking-widest  "
+              // onClick={redirect_to_login}
+            >
+              Let's give us Try
+            </button>
+          </div>
+        </div>
       </div>
 
       {/* Cookies Modal */}
@@ -39,17 +97,53 @@ const Home = () => {
             Learn more
           </button>
         </div>
-        {/* <button
-          onClick={() => setModal(false)}
-          className="bg-red-500 w-6 h-6 p-2 rounded-xl"
-        >
-          <Icon
-            icon="bytesize:close"
-            fontSize={9}
-            color={"white"}
-            className="bg-transparent"
-          />
-        </button> */}
+      </div>
+
+      {/* SIDEBAR ITEM */}
+      <div
+        // onClick={() => setHam(true)}
+        className={cn(" transition duration-200  ", {
+          "-translate-x-full z-[-1] pointer-events-none ": ham,
+          "translate-x-0 fixed inset-0 w-full bg-[rgba(0,0,0,0.8)] z-[1] pointer-events-auto":
+            !ham,
+        })}
+      >
+        <div className="sidebar-gradient transition duration-200 w-[35%] h-full py-4 relative z-[2]  ">
+          <div className="justify-end flex px-4">
+            <button
+              onClick={() => setHam(true)}
+              className="w-6 h-6 bg-white rounded-full p-1 shadow-md"
+            >
+              <Icon
+                className="w-full h-full"
+                icon={"clarity:close-line"}
+                color={"#FF3E3E"}
+              />
+            </button>
+          </div>
+          <ul className="flex flex-col justify-between gap-6 mt-4">
+            <li className="w-full">
+              <Link className="sidebar-link " to="">
+                Home
+              </Link>
+            </li>
+            <li className="">
+              <Link className="sidebar-link" to="">
+                About
+              </Link>
+            </li>
+            <li className="">
+              <Link className="sidebar-link" to="">
+                Contact
+              </Link>
+            </li>
+            <li className="">
+              <Link className="sidebar-link" to="">
+                Webinars
+              </Link>
+            </li>
+          </ul>
+        </div>
       </div>
     </>
   );
