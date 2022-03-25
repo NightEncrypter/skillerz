@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div className="bg-[#1D3E73] p-5 mt-4">
-      <div className=" flex gap-2 items-center rounded-2xl pr-4  justify-center">
-        <div className="flex gap-2 items-center rounded-2xl pr-4 bg-white w-[85%]">
+      <div className=" flex gap-2 items-center rounded-2xl   justify-center mb-12 ">
+        <div className="flex gap-2 items-center rounded-2xl pr-4 bg-white w-[90%]">
           <input
             type="email"
             name=""
             placeholder="Enter your email"
-            className="bg-transparent w-full py-2  px-4 text-sm"
+            className="bg-transparent w-full py-[0.4rem] text-xs  px-4 "
             id=""
           />
 
@@ -38,7 +38,7 @@ const Footer = () => {
         },
       ].map((item, i) => (
         <div className="mt-6" key={i}>
-          <h3 className="text-center mb-6 font-medium text-sm text-white">
+          <h3 className="text-center mb-6 md:font-medium font-normal text-sm text-white">
             {item.head}
           </h3>
           <ul className=" flex flex-col justify-center gap-4">
@@ -46,7 +46,7 @@ const Footer = () => {
               <li className=" flex justify-center" key={si}>
                 <Link
                   to={""}
-                  className=" text-xs text-center text-gray-100 hover:text-gray-300"
+                  className=" text-xs text-center text-gray-100 hover:text-gray-300 font-extralight tracking-wide"
                 >
                   {link}
                 </Link>
@@ -55,6 +55,9 @@ const Footer = () => {
           </ul>
         </div>
       ))}
+      <p className="text-[0.60rem] my-2 mt-4 text-center text-white font-thin tracking-widest">
+        RecruiterX © 2022 – Privacy Policy – Terms of Use
+      </p>
     </div>
   );
 };

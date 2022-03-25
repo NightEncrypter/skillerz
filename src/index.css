@@ -10,6 +10,18 @@ html {
 input:focus {
   outline: none;
 }
+.card-shadow {
+  box-shadow: -7px 7px 16px rgba(0, 221, 251, 0.15);
+}
+::-webkit-scrollbar {
+  width: 4px;
+  border-radius: 9999px;
+  background: linear-gradient(270deg, #003063 49.75%, #0079fa 40%);
+}
+::-webkit-scrollbar-thumb {
+  background-color: #00ddfb;
+  border-radius: 13px;
+}
 
 .main_btn_color {
   background: linear-gradient(

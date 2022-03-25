@@ -7,14 +7,16 @@ import { Icon } from "@iconify/react";
 import HomeLogo1 from "../svgs/HomeLogo1";
 import Footer from "../Layout/Footer/Footer";
 import SimpleCard from "../Layout/Cards/SimpleCard";
+import Overviews from "../Layout/Overviews/Overviews";
+import CustomerReviews from "../Reviews/CustomerReviews";
 const Home = () => {
   const [openModal, setModal] = useState<boolean>(true);
   const [ham, setHam] = useState<boolean>(true);
   const navigation = useNavigate();
   return (
     <>
-      <div className="  bg-[#F4FAFF]   h-full sm:min-h-0 min-h-screen ">
-        <div className="flex justify-between items-center px-6 ">
+      <div className="  bg-main-light   w-full     ">
+        <header className="flex justify-between items-center px-6 ">
           <div className="w-[28px] h-[28px]"></div>
           <LogoSvg height={"50"} />
           <button
@@ -23,8 +25,9 @@ const Home = () => {
           >
             <Icon fontSize={28} icon={"ci:menu-alt-02"} color={"#005ECE"} />
           </button>
-        </div>
+        </header>
 
+        {/* HEADINGS */}
         <h2 className="px-6 flex  flex-wrap my-4  ">
           <div className=" font-medium text-[#C623FF] text-2xl tracking-wide w-full  ">
             RecruiterX is a
@@ -39,14 +42,19 @@ const Home = () => {
           </div>
         </h2>
 
+        {/* SVG1 */}
         <HomeLogo1 />
-        <div className="w-full flex justify-between items-center px-2  bg-[#D3E7FF] ">
-          <h4 className="text-sm text-[#0079FA] font-medium">300,000+</h4>
-          <div>
+
+        {/* WIDTH INFO */}
+        <div className="w-full flex justify-between items-center p-2  bg-[#D3E7FF]  ">
+          <h4 className="text-sm text-[#0079FA] font-medium w-[25%]">
+            300,000+
+          </h4>
+          <div className="flex-1">
             <h3 className="text-sm text-[#0079FA] font-medium">1 Million+</h3>
             <p className="text-xs">Applicants interviewed</p>
           </div>
-          <div>
+          <div className="flex-1">
             <h3 className="text-sm text-[#0079FA] font-medium">5000+</h3>
             <p className="text-xs">Hired per month using</p>
           </div>
@@ -62,7 +70,13 @@ const Home = () => {
             </button>
           </div>
         </div>
-        <SimpleCard />
+
+        <div className="px-6">
+          <Overviews />
+          <CustomerReviews />
+          <SimpleCard />
+        </div>
+
         <Footer />
       </div>
 
@@ -98,13 +112,13 @@ const Home = () => {
       {/* SIDEBAR ITEM */}
       <div
         // onClick={() => setHam(true)}
-        className={cn(" transition duration-200  ", {
+        className={cn(" transition duration-200 fixed  ", {
           "-translate-x-full z-[-1] pointer-events-none ": ham,
-          "translate-x-0 fixed inset-0 w-full bg-[rgba(0,0,0,0.8)] z-[1] pointer-events-auto":
+          "-translate-x-0  inset-0 w-full bg-[rgba(0,0,0,0.8)] z-[1] pointer-events-auto ":
             !ham,
         })}
       >
-        <div className="sidebar-gradient transition duration-200 w-[35%] h-full py-4 relative z-[2]  ">
+        <div className="sidebar-gradient transition duration-200 w-[35%] h-full py-4  z-[2] fixed   ">
           <div className="justify-end flex px-4">
             <button
               onClick={() => setHam(true)}

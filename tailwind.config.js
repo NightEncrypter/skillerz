@@ -7,6 +7,7 @@ module.exports = {
         google: "#488CFC",
         prime: "#0079FA",
         second: "#6B00F2",
+        "main-light": "#F4FAFF",
       },
     },
   },

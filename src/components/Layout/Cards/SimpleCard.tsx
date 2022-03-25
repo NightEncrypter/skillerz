@@ -45,18 +45,17 @@ const SimpleCard = () => {
   ];
   return (
     <div className="my-8">
-      <div className="text-center my-6">
-        <h3 className="font-medium mb-1 ">
+      <div className="text-center my-8 mb-10">
+        <h3 className=" mb-1 ">
           {" "}
-          Why you will <span className="text-[#9E23FF] text-2xl">
-            love
-          </span>{" "}
+          Why you will{" "}
+          <span className="text-[#7C00A7] text-3xl font-medium">love</span>{" "}
           using RecruiterX Hire
         </h3>
-        <h3 className="font-medium">We inform all thing in realtime</h3>
+        <h3 className="">We inform all thing in realtime</h3>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 sm:grid-cols-3 gap-5 px-4">
+      <div className="grid grid-cols-2 md:grid-cols-4 sm:grid-cols-3 gap-5">
         {cards.map((card, i) => (
           <div
             className={`p-3 px-4 shadow-lg hover:shadow-2xl transition duration-200 cursor-pointer rounded-xl flex  flex-col items-center  ${card.bg} `}
@@ -64,15 +63,15 @@ const SimpleCard = () => {
           >
             {card.icon}
             <h3
-              className={`${card.color} text-xs font-medium mb-2 tracking-wider text-center`}
+              className={`${card.color} text-xs font-medium mb-2 tracking-wider break-words`}
             >
               {card.head}
             </h3>
-            <p className="text-xs font-light ">
+            <p className="text-[0.6rem] tracking-wide font-light break-all ">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Architecto soluta dicta ipsum dolorum sit possimus? Lorem ipsum
-              vel dolore officia. Accusamus enim eligendi expedita id
-              accusantium?
+              quam, nulla consequatur minima porro tempore repudiandae, quisquam
+              voluptatem omnis qui voluptate?
             </p>
             <button
               className={` ${

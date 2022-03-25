@@ -27,19 +27,23 @@ const CandidateEmailVerification = () => {
         </h2>
 
         <div className=" flex flex-col justify-center items-center  gap-2 mt-4 ">
-          <svg
-            height="80"
-            viewBox="0 0 155 124"
-            className="w-full my-8 "
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M56.6087 0L105.633 93H7.58413L56.6087 0Z" fill="#00E0FF" />
-            <path
-              d="M115.913 28.3044L149.763 93.0001H82.0628L115.913 28.3044Z"
-              fill="#6B00F2"
-            />
-          </svg>
+          <a href="/" className="h-[80px] block my-8 ">
+            <svg
+              viewBox="0 0 155 124"
+              className="w-full h-full  "
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M56.6087 0L105.633 93H7.58413L56.6087 0Z"
+                fill="#00E0FF"
+              />
+              <path
+                d="M115.913 28.3044L149.763 93.0001H82.0628L115.913 28.3044Z"
+                fill="#6B00F2"
+              />
+            </svg>
+          </a>
           <div className="w-full m ">
             <div className="flex flex-col gap-5 mb-5">
               <input

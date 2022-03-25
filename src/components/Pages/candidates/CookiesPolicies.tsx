@@ -118,7 +118,7 @@ const CookiesPolicies = () => {
           </p>
         </div>
       </div>
-      <div className="flex justify-center items-center mt-6">
+      <div className="flex justify-center items-center my-6">
         <button
           className={cn(
             " py-2  w-[9rem] text-xs text-white font-light tracking-wider rounded-2xl  transition ease-in duration-200",
