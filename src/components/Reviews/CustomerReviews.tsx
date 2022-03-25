@@ -1,6 +1,5 @@
 import { Icon } from "@iconify/react";
-import React from "react";
-import Smile from "../../assets/smile.png";
+import Smile from "../../assets/img/smile.png";
 const CustomerReviews = () => {
   return (
     <div className="">
@@ -31,7 +30,7 @@ const CustomerReviews = () => {
           </p>
           <div className="flex items-center gap-2 mt-4 ">
             <h4 className="font-medium text-xs ">Facebook</h4>
-            <a href="#">
+            <a href="https://www.facebook.com">
               <Icon icon="akar-icons:facebook-fill" color="#1279F3" />
             </a>
           </div>
@@ -59,7 +58,7 @@ const CustomerReviews = () => {
           </p>
           <div className="flex items-center gap-2 mt-4 ">
             <h4 className="font-medium text-xs ">Facebook</h4>
-            <a href="#">
+            <a href="https://www.facebook.com">
               <Icon icon="akar-icons:facebook-fill" color="#1279F3" />
             </a>
           </div>
