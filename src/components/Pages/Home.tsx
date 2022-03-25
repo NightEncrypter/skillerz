@@ -49,7 +49,7 @@ const Home = () => {
 
         {/* SVG1 */}
         <HomeLogo1 />
-        <div className="flex justify-center my-4   ">
+        <div className="flex justify-center    ">
           <button
             className=" w-[50%] block main_btn main_btn_color  py-[0.60rem] text-white text-sm  capitalize tracking-widest  "
             // onClick={redirect_to_login}
