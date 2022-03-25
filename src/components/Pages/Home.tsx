@@ -17,7 +17,7 @@ const Home = () => {
   return (
     <>
       <div className="  bg-main-light   w-full     ">
-        <header className="flex justify-between items-center px-6 ">
+        <header className="sticky top-0 left-0 right-0 bg-main-light flex justify-between items-center px-6 ">
           <div className="w-[28px] h-[28px]"></div>
           <LogoSvg height={"50"} />
           <button
@@ -37,8 +37,7 @@ const Home = () => {
           <div className="font-medium  ml-auto ">
             Candidate Empowerment Platform
           </div>
-          <div className="font-medium text-[#00D1EE] text-lg tracking-wide w-full  ">
-            {/* <div className=" w-3 h-2   inline-block break-all  "></div> */}
+          <div className="font-medium text-[#00D1EE] text-lg tracking-wide w-full break-all  ">
             designed to flip recruitment table
           </div>
         </h2>
@@ -61,7 +60,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="pl-6 mt-4">
+        <div className=" mt-4">
           <div className="flex justify-center ">
             <button
               className=" w-[70%] block main_btn main_btn_color  py-[0.68rem] text-white text-sm  capitalize tracking-widest  "
