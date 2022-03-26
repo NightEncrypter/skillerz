@@ -1,5 +1,6 @@
 import { Icon } from "@iconify/react";
 import { useNavigate } from "react-router-dom";
+import HomeLogoLink from "../../logoLinks/HomeLogoLink";
 
 const SetPassword = () => {
   const navigation = useNavigate();
@@ -19,20 +20,23 @@ const SetPassword = () => {
           secured your account
         </div>
       </h2>
+      <HomeLogoLink height={"80"} className="h-20 mt-4 inline-block w-full" />
 
-      <svg
-        height="80"
-        viewBox="0 0 155 124"
-        className="w-full mt-4 "
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path d="M56.6087 0L105.633 93H7.58413L56.6087 0Z" fill="#00E0FF" />
-        <path
-          d="M115.913 28.3044L149.763 93.0001H82.0628L115.913 28.3044Z"
-          fill="#6B00F2"
-        />
-      </svg>
+      {/* <a href="#" className=" mt-4 inline-block w-full">
+        <svg
+          height={80}
+          viewBox="0 0 155 124"
+          className="w-full "
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M56.6087 0L105.633 93H7.58413L56.6087 0Z" fill="#00E0FF" />
+          <path
+            d="M115.913 28.3044L149.763 93.0001H82.0628L115.913 28.3044Z"
+            fill="#6B00F2"
+          />
+        </svg>
+      </a> */}
 
       <div className=" flex flex-col justify-center items-center  gap-2 mt-5 ">
         <div className="w-full m ">
@@ -58,13 +62,13 @@ const SetPassword = () => {
           </div>
 
           <div className="w-full mt-7  ">
-            <button className=" block main_btn main_btn_color  py-[0.85rem] text-white text-sm w-full capitalize tracking-widest  ">
+            <button className=" block main_btn main_btn_color  py-[0.85rem] text-white text-sm w-full capitalize tracking-widest hover:-translate-y-1 transition duration-200 hover:shadow-lg  ">
               Change password
             </button>
           </div>
 
           <button
-            className="w-full  flex justify-center mt-10 bg-[#03C8A4] rounded-lg text-white py-[0.4rem] items-center "
+            className="w-full  flex justify-center mt-10 bg-[#03C8A4] rounded-lg text-white py-[0.4rem] items-center hover:-translate-y-1 transition duration-200 hover:shadow-lg "
             onClick={submitPass}
           >
             <Icon icon="ep:back" fontSize={17} className="bg-transparent" />{" "}

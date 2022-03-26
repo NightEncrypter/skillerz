@@ -1,6 +1,6 @@
 import { Icon } from "@iconify/react";
 import { Link } from "react-router-dom";
-import LogoSvg from "../../svgs/logoSvg";
+import HomeLogoLink from "../../logoLinks/HomeLogoLink";
 const CandidateLogin = () => {
   return (
     <div className="px-8 bg-[#F4FAFF]  py-4 h-full sm:min-h-0 min-h-screen  ">
@@ -27,23 +27,24 @@ const CandidateLogin = () => {
         />
       </svg> */}
       <div className=" flex flex-col justify-center items-center mt-6    ">
-        <LogoSvg height={"80"} />
+        {/* <LogoSvg height={"80"} /> */}
+        <HomeLogoLink height="80" className="mt-4" />
         <div className="w-full m ">
-          <div className="flex flex-col gap-5 mb-5">
+          <div className="flex flex-col gap-5 mb-5 ">
             <input
               type="text"
-              className="w-full py-3 px-3 rounded-lg font-medium text-sm input-shadow"
+              className="w-full py-3 px-3 rounded-lg font-medium text-sm input-shadow "
               placeholder="Enter your email"
             />
             <input
               type="text"
-              className="w-full py-3 px-3 rounded-lg font-medium text-sm input-shadow"
+              className="w-full py-3 px-3 rounded-lg font-medium text-sm input-shadow "
               placeholder="Enter your password"
             />
           </div>
 
           <div className="w-full  ">
-            <button className=" block main_btn main_btn_color  py-3 text-white text-sm w-full capitalize tracking-widest  ">
+            <button className="  block main_btn main_btn_color  py-3 text-white text-sm w-full capitalize tracking-widest translateYAnim  mt-8 hover:shadow-xl duration-200 ">
               Login
             </button>
 
@@ -69,7 +70,7 @@ const CandidateLogin = () => {
 
             {/* SOCIAL BUTTONS */}
             <div className="flex flex-col gap-5 ">
-              <button className=" bg-white w-full rounded-2xl     text-sm flex     items-center ">
+              <button className="scaleAnimGoogle bg-white w-full rounded-2xl     text-sm flex     items-center ">
                 <div className=" p-[0.35rem] px-4 border_with_boxshadow bg-white rounded-l-2xl google-border   ">
                   <Icon
                     icon="flat-color-icons:google"
@@ -84,7 +85,7 @@ const CandidateLogin = () => {
                 </div>
               </button>
               {/* Github icon */}
-              <button className=" w-full rounded-2xl     text-sm flex      items-center ">
+              <button className=" scaleAnim w-full rounded-2xl     text-sm flex      items-center  scaleAnimGithub">
                 <div className=" p-[0.35rem] px-4 bg-white rounded-l-2xl github-border   ">
                   <Icon
                     icon="logos:github-icon"
@@ -93,12 +94,12 @@ const CandidateLogin = () => {
                   />{" "}
                 </div>
                 <div className="bg-gray-800 py-[9px]  w-full h-full rounded-r-2xl ">
-                  <span className="text-white  tracking-wider font-light capitalize text-xs">
+                  <span className="text-white  tracking-wider font-light capitalize text-xs ">
                     Login with github
                   </span>
                 </div>
               </button>
-              <button className=" w-full rounded-2xl    text-sm flex       bg-white ">
+              <button className=" scaleAnimLinkedIn w-full rounded-2xl    text-sm flex       bg-white ">
                 <div className=" p-[0.35rem] px-4 bg-white rounded-l-2xl linkedin-border   ">
                   <Icon icon="logos:linkedin-icon" fontSize={27} className="" />{" "}
                 </div>

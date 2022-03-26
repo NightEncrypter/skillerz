@@ -15,7 +15,7 @@ import Overviews from "../Layout/Overviews/Overviews";
 import CustomerReviews from "../Reviews/CustomerReviews";
 import HomeCaraousel from "../caraousels/HomeCaraousel";
 const Home = () => {
-  const [openModal, setModal] = useState<boolean>(true);
+  const [openModal, setModal] = useState<boolean>(false);
   const [ham, setHam] = useState<boolean>(true);
   const navigation = useNavigate();
   const controlScroll = useRef<HTMLDivElement>(null);
@@ -36,6 +36,10 @@ const Home = () => {
   // const onScroll = () => {
 
   // }
+
+  const redirect_to_login = () => {
+    navigation("candidates/login");
+  };
   return (
     <>
       <div
@@ -46,12 +50,12 @@ const Home = () => {
           "overflow-auto": ham,
         })}
       >
-        <header className="sticky top-0 left-0 right-0 bg-main-light flex justify-between items-center px-4 ">
+        <header className="sticky z-[5] top-0 left-0 right-0 bg-main-light flex justify-between items-center px-4 ">
           <div className="w-[28px] h-[28px] sm:hidden z-50"></div>
           <LogoSvg height={"60"} />
           <button
             onClick={() => setHam((prev) => !prev)}
-            className="transition duration-200"
+            className="transition duration-200  hamAnim md:hidden "
           >
             <Icon
               fontSize={28}
@@ -80,8 +84,8 @@ const Home = () => {
         <HomeLogo1 />
         <div className="flex justify-center mt-4    ">
           <button
-            className=" w-[50%] block main_btn main_btn_color  py-[0.60rem] text-white text-sm  capitalize tracking-widest  "
-            // onClick={redirect_to_login}
+            className=" w-[50%] block main_btn main_btn_color  py-[0.60rem] text-white text-sm  capitalize tracking-widest hover:-translate-y-2  shadow1 transition duration-200 btn-animation "
+            onClick={redirect_to_login}
           >
             Let's give us Try
           </button>
@@ -165,7 +169,7 @@ const Home = () => {
               />
             </button>
           </div>
-          <ul className="flex flex-col justify-between gap-6 mt-4">
+          <ul className="flex flex-col justify-between gap-4  mt-4 overflow-hidden">
             <li className="w-full">
               <Link className="sidebar-link " to="">
                 Home

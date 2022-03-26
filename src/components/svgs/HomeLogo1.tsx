@@ -1,7 +1,7 @@
 const HomeLogo1 = ({ height }: { height?: string }) => {
   return (
     <svg
-      className="sm:hidden w-full"
+      className="sm:hidden w-full svg-animation1 "
       height={height ? height : "300"}
       viewBox="0 0 244 176"
       fill="none"

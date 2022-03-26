@@ -2,6 +2,7 @@ import { Icon } from "@iconify/react";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import cn from "classnames";
+import HomeLogoLink from "../../logoLinks/HomeLogoLink";
 const CandidateEmailVerification = () => {
   const [openModal, setModal] = useState<boolean>(false);
   const [toggle, setToggle] = useState<boolean>(false);
@@ -27,23 +28,7 @@ const CandidateEmailVerification = () => {
         </h2>
 
         <div className=" flex flex-col justify-center items-center  gap-2 mt-4 ">
-          <a href="/" className="h-[80px] block my-8 ">
-            <svg
-              viewBox="0 0 155 124"
-              className="w-full h-full  "
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M56.6087 0L105.633 93H7.58413L56.6087 0Z"
-                fill="#00E0FF"
-              />
-              <path
-                d="M115.913 28.3044L149.763 93.0001H82.0628L115.913 28.3044Z"
-                fill="#6B00F2"
-              />
-            </svg>
-          </a>
+          <HomeLogoLink height="80" className={"my-8"} />
           <div className="w-full m ">
             <div className="flex flex-col gap-5 mb-5">
               <input
@@ -56,7 +41,7 @@ const CandidateEmailVerification = () => {
             <div className="w-full  ">
               <button
                 onClick={submitEmail}
-                className=" block main_btn main_btn_color  py-[0.9rem] text-white text-xs w-full capitalize tracking-widest font-medium  "
+                className=" block main_btn main_btn_color  py-[0.9rem] text-white text-xs w-full capitalize tracking-widest font-medium translateYAnim hover:-translate-y-2 hover:shadow-xl mt-8  "
               >
                 Submit email
               </button>
@@ -83,7 +68,7 @@ const CandidateEmailVerification = () => {
 
               {/* SOCIAL BUTTONS */}
               <div className="flex flex-col gap-5 my-4 ">
-                <button className=" bg-white w-full rounded-2xl     text-sm flex     items-center ">
+                <button className=" bg-white w-full rounded-2xl scaleAnimGoogle     text-sm flex     items-center ">
                   <div className=" p-[0.35rem] px-4 border_with_boxshadow bg-white rounded-l-2xl google-border   ">
                     <Icon
                       icon="flat-color-icons:google"
@@ -91,14 +76,14 @@ const CandidateEmailVerification = () => {
                       // className="bg-green"
                     />{" "}
                   </div>
-                  <div className="bg-google py-[9px]  w-full h-full rounded-r-2xl ">
-                    <span className="text-white  tracking-wider font-light capitalize text-xs">
+                  <div className="bg-google hover:bg-[#4376ce] py-[9px]  w-full h-full rounded-r-2xl ">
+                    <span className="text-white  tracking-wider font-light capitalize text-xs ">
                       Login with google
                     </span>
                   </div>
                 </button>
                 {/* Github icon */}
-                <button className=" w-full rounded-2xl     text-sm flex      items-center ">
+                <button className=" w-full rounded-2xl scaleAnimGithub    text-sm flex      items-center ">
                   <div className=" p-[0.35rem] px-4 bg-white rounded-l-2xl github-border   ">
                     <Icon
                       icon="logos:github-icon"
@@ -106,13 +91,13 @@ const CandidateEmailVerification = () => {
                       className="bg-transparent"
                     />{" "}
                   </div>
-                  <div className="bg-gray-800 py-[9px]  w-full h-full rounded-r-2xl ">
+                  <div className="bg-gray-800 hover:bg-gray-900 py-[9px]  w-full h-full rounded-r-2xl ">
                     <span className="text-white  tracking-wider font-light capitalize text-xs">
                       Login with github
                     </span>
                   </div>
                 </button>
-                <button className=" w-full rounded-2xl    text-sm flex       bg-white ">
+                <button className=" w-full rounded-2xl scaleAnimLinkedIn    text-sm flex       bg-white ">
                   <div className=" p-[0.35rem] px-4 bg-white rounded-l-2xl linkedin-border   ">
                     <Icon
                       icon="logos:linkedin-icon"
@@ -120,7 +105,7 @@ const CandidateEmailVerification = () => {
                       className=""
                     />{" "}
                   </div>
-                  <div className="bg-linked-in py-[9px]  w-full h-full rounded-r-2xl ">
+                  <div className="bg-linked-in hover:bg-blue-900 py-[9px]  w-full h-full rounded-r-2xl ">
                     <span className="text-white  tracking-wider font-light capitalize text-xs">
                       Login with linkedin
                     </span>

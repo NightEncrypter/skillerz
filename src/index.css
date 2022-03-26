@@ -124,5 +124,96 @@ input:focus {
 }
 
 .sidebar-link {
-  @apply text-white text-sm font-medium hover:text-blue-300 transition duration-200 tracking-wide w-full block px-2 py-2;
+  @apply text-white text-sm font-medium  transition duration-200 tracking-wide w-full block px-2 py-3 hover:bg-gray-100 hover:text-blue-800 hover:translate-x-4 rounded-xl;
+}
+
+.btn-animation {
+  animation: fadeIn 0.8s forwards ease-in-out;
+}
+.hamAnim {
+  box-shadow: 0px 0px 10px 2px rgba(29, 44, 80, 0.185);
+  border-radius: 10px;
+  padding: 0.5rem;
+
+  animation: hamIn 0.8s forwards ease-in-out;
+}
+.scaleAnimGoogle {
+  animation: scale 400ms 500ms forwards ease-in-out;
+}
+.scaleAnimGithub {
+  animation: scale 400ms 900ms forwards ease-in-out;
+}
+.scaleAnimLinkedIn {
+  animation: scale 400ms 1500ms forwards ease-in-out;
+}
+.translateYAnim {
+  animation: yAnim 500ms 400ms forwards ease-in-out;
+}
+.translateYAnimSVG {
+  animation: yAnimSVG 500ms forwards ease-in-out;
+}
+
+.fadeAnim {
+  animation: scale 1s forwards cubic-bezier(1, 1.89, 0.43, 0.24);
+}
+
+@keyframes yAnimSVG {
+  0% {
+    opacity: 0;
+    transform: scale(0.2);
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0);
+
+    transform: scale(1);
+    opacity: 100%;
+  }
+}
+@keyframes scale {
+  0% {
+    opacity: 0;
+    transform: scale(0.2);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 100%;
+  }
+}
+@keyframes yAnim {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(-0px);
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes hamIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+    /* transform: translateY(-90px); */
+  }
+  100% {
+    opacity: 100%;
+    /* transform: translateX(-0px); */
+    transform: scale(1);
+  }
+}
+
+.shadow1:hover {
+  box-shadow: 0 0 12px 2px rgba(0, 0, 0, 0.3);
 }
