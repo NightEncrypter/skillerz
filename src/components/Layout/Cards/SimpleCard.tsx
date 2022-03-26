@@ -46,28 +46,34 @@ const SimpleCard = () => {
   return (
     <div className="mb-8 ">
       <div className="text-center my-8 mb-10">
-        <h3 className=" mb-1 tracking-wider ">
-          {" "}
-          Why you will{" "}
-          <span className="text-[#7C00A7] text-3xl font-medium">love</span>{" "}
-          using RecruiterX Hire
-        </h3>
-        <h3 className="tracking-wider">We inform all thing in realtime</h3>
+        <div>
+          <h3 className=" mb-1 tracking-wider text-2xl md:my-5 ">
+            {" "}
+            Why you will{" "}
+            <span className="text-[#7C00A7] text-3xl font-medium">
+              love
+            </span>{" "}
+            using RecruiterX Hire
+          </h3>
+          <span className="tracking-wider text-xl ">
+            We inform all thing in realtime
+          </span>
+        </div>
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-3 sm:grid-cols-3 gap-5 ">
         {cards.map((card, i) => (
           <div
-            className={`p-3 px-4  hover:shadow-lg transition duration-200 cursor-pointer rounded-xl flex  flex-col items-center  hover:-translate-y-3 ${card.bg} `}
+            className={`p-3 md:p-5 sm:p-4 px-4  hover:shadow-lg transition duration-200 cursor-pointer rounded-xl flex  flex-col items-center  hover:-translate-y-3 ${card.bg} `}
             key={i}
           >
             {card.icon}
             <h3
-              className={`${card.color} text-[0.6rem] font-medium mb-2 tracking-wider break-words md:text-base`}
+              className={`${card.color} text-[0.6rem] font-medium mb-2 tracking-wider break-words md:text-lg `}
             >
               {card.head}
             </h3>
-            <p className="text-[0.4rem] md:text-xs tracking-wide font-light break-all ">
+            <p className="text-[0.4rem] sm:text-xs tracking-wide font-light break-all md:text-sm  ">
               Lorem ipsum dolor sit amet consectetur adipisicing elit soluta
               dicta ipsum dolorum sit possimus? voluptatem
             </p>

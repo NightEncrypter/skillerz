@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div className="bg-[#1D3E73] p-5 mt-4">
-      <div className=" flex gap-2 md:justify-end  items-center rounded-2xl   justify-center mb-12 px-4 ">
+      <div className=" flex gap-2 md:justify-end  items-center rounded-2xl   justify-center mb-12 px-4 md:pt-5 ">
         <div className="flex gap-2 items-center rounded-2xl pr-4 bg-white w-[90%] md:w-[25%]">
           <input
             type="email"

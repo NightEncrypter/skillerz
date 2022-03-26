@@ -3,16 +3,16 @@ import Smile from "../../assets/img/smile.png";
 import Earth from "../svgs/Earth";
 const CustomerReviews = () => {
   return (
-    <div className="md:my-8">
-      <h2 className="text-[#0069E7] text-sm mb-8 w-fit border-b-[0.1px] border-blue-300 md:font-medium md:text-lg">
+    <div className="md:my-8 md:mt-16">
+      <h2 className="text-[#0069E7] text-sm mb-8 w-fit border-b-[0.1px] border-blue-300 md:font-medium md:text-2xl my-6 ">
         Customer Reviews
       </h2>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5 ">
-        {[1, 2, 3, 4].map((b, i) => (
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-5 ">
+        {[1, 2, 3].map((b, i) => (
           <div
             className={` ${
-              i <= 1 ? "hidden md:block" : "md:block"
+              i < 1 ? "hidden md:block" : "md:block"
             } rounded-xl card-shadow  p-4 bg-[#FFFFFF] transition duration-200  hover:-translate-y-2 hover:shadow-md`}
             key={i}
           >
@@ -62,10 +62,15 @@ const CustomerReviews = () => {
           </div>
         ))}
       </div>
-      <div className="flex justify-between max-w-[14rem] md:max-w-sm  mx-auto relative z-[1]">
-        {[1, 2].map((v, i) => (
-          <div className="flex flex-col gap-[2px]">
-            {new Array(60).fill(0).map((x, i) => (
+      <div className="flex justify-between max-w-[14rem] md:max-w-[500px]  mx-auto relative z-[1]">
+        {[1, 2, 3].map((v, i) => (
+          <div
+            key={i}
+            className={`flex flex-col gap-[2px] ${
+              i === 0 && "hidden  md:block"
+            } `}
+          >
+            {new Array(70).fill(0).map((x, i) => (
               <div className="flex gap-[1.2px]">
                 {[1, 2, 3, 4, 5, 6].map((v, i) => (
                   <div className="w-[2px] h-[2px]  bg-blue-300" key={i}></div>
@@ -75,7 +80,7 @@ const CustomerReviews = () => {
           </div>
         ))}
       </div>
-      <div className=" flex flex-col justify-between items-center  relative -top-[5rem] md:-top-[7rem] z-[1] ">
+      <div className=" flex flex-col justify-between items-center  relative -top-[5rem] md:-top-[10rem] z-[1] ">
         <Earth />
         <h3 className="text-center tracking-widest mt-3 ">
           We are{" "}

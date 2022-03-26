@@ -3,14 +3,14 @@ const HomeLogoLink = ({
   link,
   className,
 }: {
-  height: string | number;
+  height?: string | number;
   link?: string;
   className?: string;
 }) => {
   return (
     <a href={link ? link : "/"} className={className}>
       <svg
-        height={height ? height : ""}
+        height={height ? height : "20"}
         viewBox="0 0 155 124"
         className="w-full h-full translateYAnimSVG "
         fill="none"

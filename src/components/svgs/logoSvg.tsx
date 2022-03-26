@@ -1,9 +1,15 @@
-const LogoSvg = ({ height }: { height: string }) => {
+const LogoSvg = ({
+  height,
+  className,
+}: {
+  height?: string;
+  className?: string;
+}) => {
   return (
     <svg
       height={height}
       viewBox="0 0 155 124"
-      className="w-full mt-4 "
+      className={className ? className : "w-full mt-4 "}
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >

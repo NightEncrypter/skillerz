@@ -6,7 +6,7 @@ import {
 import cn from "classnames";
 import CookiesLogo from "../svgs/CookiesLogo";
 import LogoSvg from "../svgs/logoSvg";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { Icon } from "@iconify/react";
 import HomeLogo1 from "../svgs/HomeLogo1";
 import Footer from "../Layout/Footer/Footer";
@@ -14,6 +14,9 @@ import SimpleCard from "../Layout/Cards/SimpleCard";
 import Overviews from "../Layout/Overviews/Overviews";
 import CustomerReviews from "../Reviews/CustomerReviews";
 import HomeCaraousel from "../caraousels/HomeCaraousel";
+import LandingSvg from "../svgs/LandingSvg";
+import Smile from "../../assets/img/smile.png";
+
 const Home = () => {
   const [openModal, setModal] = useState<boolean>(false);
   const [ham, setHam] = useState<boolean>(true);
@@ -50,7 +53,7 @@ const Home = () => {
           "overflow-auto": ham,
         })}
       >
-        <header className="sticky z-[5] top-0 left-0 right-0 bg-main-light flex justify-between items-center px-4 ">
+        <header className="sticky  top-0 left-0 right-0 bg-main-light flex justify-between items-center px-4 md:hidden ">
           <div className="w-[28px] h-[28px] sm:hidden z-50"></div>
           <LogoSvg height={"60"} />
           <button
@@ -79,19 +82,129 @@ const Home = () => {
             designed to flip recruitment table
           </div>
         </h2>
+        <header className="sm:flex item-center justify-between px-10 w-full h-[72px] bg-[#F4FAFF] hidden  ">
+          <a href="/" className=" flex justify-center  items-center mt-3">
+            <LogoSvg className="h-14 w-14" />
+          </a>
 
+          <nav className="w-[35%] flex items-center ml-auto ">
+            <ul className="flex justify-between items-center  w-full">
+              <li>
+                <NavLink className={"font-medium"} to={"/"}>
+                  Home
+                </NavLink>
+              </li>
+              <li>
+                <NavLink className={"font-medium"} to={"/"}>
+                  Services
+                </NavLink>
+              </li>
+              <li>
+                <NavLink className={"font-medium"} to={"/"}>
+                  About
+                </NavLink>
+              </li>
+              <li></li>
+            </ul>
+          </nav>
+
+          <div className="flex items-center justify-between w-[43%] ">
+            <div className="flex items-center bg- rounded-md gap-4 pl-2 bg-gray-200 ">
+              <Icon icon="bi:search" color="#CCCCCC" />
+              <input
+                type="text"
+                name=""
+                id=""
+                className="rounded-xl bg-transparent h-full py-[0.5rem] tracking-wide text-sm "
+                placeholder="Search..."
+              />
+            </div>
+            <a
+              href="/"
+              className="py-2 text-[#00DDFB] font-medium  px-5  rounded-lg text-sm  capitalize tracking-widest  "
+            >
+              Login
+            </a>
+            <button
+              className="py-[0.6rem]  main_btn_color px-5  rounded-lg   text-white text-sm  capitalize tracking-widest "
+              onClick={redirect_to_login}
+            >
+              Request a call
+            </button>
+          </div>
+        </header>
+        <div className=" hidden md:flex items-center  justify-between w-full px-[80px] md:mx-auto md:max-w-[1400px] h-full min-h-[90vh]">
+          <div className="w-[40%]">
+            <h3 className="text-base mb-6 text-[#FCA473]">Why Choose Us</h3>
+            <h2 className="text-4xl font-semibold my-4 leading-[1.40]">
+              We are Hiring a massive amount of Employees for Software
+              Development.
+            </h2>
+            <h6 className="text-base my-6 text-[#868686] w-[85%] ">
+              So be ready and unleased your skills instantly as soon. This skill
+              will help to greater success of your life{" "}
+            </h6>
+            <div className="flex gap-8 items-center my-6">
+              <button className="bg-[#00DDFB] rounded-md py-2   text-white px-8 ">
+                Read More
+              </button>
+              <button className="flex justify-between gap-5 items-center">
+                <div className="h-13 w-13 border-[#8FF2FF] border-t-[6px] rotate-[-40deg]  border-l-[6px] rounded-full p-[0.42rem]">
+                  <div className="rounded-full play-btn-gradient h-10 w-10 p-2 rotate-[40deg] ">
+                    <Icon
+                      icon={"bi:play-fill"}
+                      className="w-full h-full text-white"
+                    />
+                  </div>
+                </div>
+
+                <span className="font-semibold tracking-wide">Watch now</span>
+              </button>
+            </div>
+
+            <div className="flex gap-4 my-6">
+              <div className="flex -space-x-10 ">
+                {[1, 2, 3, 4].map((img, i) => (
+                  <div
+                    className="w-12 h-12 hover:scale-[1.1] transition"
+                    key={i}
+                  >
+                    <img
+                      src={Smile}
+                      alt=""
+                      className="w-full h-full rounded-full object-cover"
+                    />
+                  </div>
+                ))}
+              </div>
+
+              <div className="flex flex-col ">
+                <h3 className="text-xs tracking-wide w-[85%]  text-[#C623FF] ">
+                  27,500 candidates gots their jobs from cocca
+                </h3>
+                <p className="text-[0.6rem] text-[#B9B9B9] ">Web designer</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="w-[50%] h-full">
+            <div className="w-full h-full ">
+              <LandingSvg />
+            </div>
+          </div>
+        </div>
         {/* SVG1 */}
         <HomeLogo1 />
         <div className="flex justify-center mt-4    ">
           <button
-            className=" w-[50%] block main_btn main_btn_color  py-[0.60rem] text-white text-sm  capitalize tracking-widest hover:-translate-y-2  shadow1 transition duration-200 btn-animation "
+            className=" w-[50%] block main_btn main_btn_color  py-[0.60rem] text-white text-sm  capitalize tracking-widest hover:-translate-y-2  shadow1 transition duration-200 btn-animation sm:hidden"
             onClick={redirect_to_login}
           >
             Let's give us Try
           </button>
         </div>
         {/* WIDTH INFO */}
-        <div className="w-full flex gap-3 justify-between items-center p-4 px-4  bg-[#D3E7FF]  mt-8 ">
+        <div className="w-full flex gap-3 justify-between items-center p-4 px-4  bg-[#D3E7FF]  mt-8 sm:hidden">
           <h4 className="text-sm text-[#0079FA] font-medium  ">300,000+</h4>
           <div className="flex-1 border-r-[1px] border-l-[1px] border-[#0079FA] self-center px-2  ">
             <div className="">
@@ -105,16 +218,16 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="px-8 md:px-12 ">
+        <section className="px-8 md:px-12 md:max-w-7xl md:mx-auto ">
           <Overviews />
           <CustomerReviews />
-        </div>
-        <div className="-translate-y-8">
+        </section>
+        <section className="-translate-y-8">
           <HomeCaraousel />
-        </div>
-        <div className="px-6 md:px-10">
+        </section>
+        <section className="px-6 md:px-10">
           <SimpleCard />
-        </div>
+        </section>
         <Footer />
       </div>
 

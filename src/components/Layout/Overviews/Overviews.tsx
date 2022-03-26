@@ -22,25 +22,30 @@ const Overviews = () => {
     },
   ];
   return (
-    <div className=" sm:mt-8  md:grid md:grid-cols-3 md:gap-5">
-      {/* Card */}
+    <div className="md:my-8 my-6">
+      <h2 className="md:text-2xl my-4 text-[#0069E7] font-medium border-b-[0.1px]  border-blue-300 w-fit text-sm">
+        What we are doing ??
+      </h2>
 
-      {cards.map((card, i) => (
-        <div
-          className="my-6 md:my-0 bg-white p-6 transition duration-200 rounded-xl hover:-translate-y-2 hover:shadow-md"
-          key={i}
-        >
-          <h2
-            className={`${
-              i === 1 ? "text-[#AD00EB]" : "text-[#0073FD]"
-            } font-semibold`}
+      <div className=" md:mt-8 md:grid sm:grid-cols-2 md:grid-cols-3 md:gap-5">
+        {/* Card */}
+        {cards.map((card, i) => (
+          <div
+            className="my-6 md:my-0 bg-white p-6 transition duration-200 rounded-xl hover:-translate-y-2 hover:shadow-md"
+            key={i}
           >
-            {card.head}
-          </h2>
-          <p className="text-xs font-light my-1">{card.desc}</p>
-          <div className="h-[100px] mt-4">{card.icon}</div>
-        </div>
-      ))}
+            <h2
+              className={`${
+                i === 1 ? "text-[#AD00EB]" : "text-[#0073FD]"
+              } font-semibold`}
+            >
+              {card.head}
+            </h2>
+            <p className="text-xs font-light my-1">{card.desc}</p>
+            <div className="h-[100px] mt-4">{card.icon}</div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

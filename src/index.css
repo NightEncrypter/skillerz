@@ -123,6 +123,10 @@ input:focus {
   );
 }
 
+.play-btn-gradient {
+  background: linear-gradient(180deg, #022787 0%, #00b5cd 100%);
+}
+
 .sidebar-link {
   @apply text-white text-sm font-medium  transition duration-200 tracking-wide w-full block px-2 py-3 hover:bg-gray-100 hover:text-blue-800 hover:translate-x-4 rounded-xl;
 }
