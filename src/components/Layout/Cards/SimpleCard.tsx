@@ -47,16 +47,19 @@ const SimpleCard = () => {
     <div className="mb-8 ">
       <div className="text-center my-8 mb-10">
         <div>
-          <h3 className=" mb-1 tracking-wider text-2xl md:my-5 ">
+          <h3 className=" mb-1 tracking-wider  md:text-2xl md:my-5 ">
             {" "}
             Why you will{" "}
-            <span className="text-[#7C00A7] text-3xl font-medium">
+            <span className="text-[#7C00A7] text-3xl md:text-5xl font-medium">
               love
             </span>{" "}
             using RecruiterX Hire
           </h3>
-          <span className="tracking-wider text-xl ">
-            We inform all thing in realtime
+          <span className="tracking-wider md:text-2xl ">
+            We inform all things in{" "}
+            <span className="text-2xl font-medium text-blue-600 md:text-5xl">
+              realtime
+            </span>
           </span>
         </div>
       </div>

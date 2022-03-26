@@ -225,7 +225,7 @@ const Home = () => {
         <section className="-translate-y-8">
           <HomeCaraousel />
         </section>
-        <section className="px-6 md:px-10">
+        <section className="px-8  md:px-12 md:max-w-7xl md:mx-auto">
           <SimpleCard />
         </section>
         <Footer />

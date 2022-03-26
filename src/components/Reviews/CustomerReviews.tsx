@@ -77,9 +77,11 @@ const CustomerReviews = () => {
       </div>
       <div className=" flex flex-col justify-between items-center  relative -top-[5rem] md:-top-[10rem] z-[1] ">
         <Earth />
-        <h3 className="text-center tracking-widest mt-3 ">
+        <h3 className="text-center tracking-widest mt-3 md:text-2xl ">
           We are{" "}
-          <span className="text-[#7C00A7] text-3xl font-medium">growing</span>{" "}
+          <span className="text-[#7C00A7] text-3xl md:text-5xl font-medium">
+            growing
+          </span>{" "}
           all over the world{" "}
         </h3>
       </div>
