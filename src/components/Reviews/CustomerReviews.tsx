@@ -64,12 +64,7 @@ const CustomerReviews = () => {
       </div>
       <div className="flex justify-between max-w-[14rem] md:max-w-[500px]  mx-auto relative z-[1]">
         {[1, 2, 3].map((v, i) => (
-          <div
-            key={i}
-            className={`flex flex-col gap-[2px] ${
-              i === 0 && "hidden  md:block"
-            } `}
-          >
+          <div key={i} className={`flex flex-col gap-[2px]  `}>
             {new Array(70).fill(0).map((x, i) => (
               <div className="flex gap-[1.2px]">
                 {[1, 2, 3, 4, 5, 6].map((v, i) => (
