@@ -20,23 +20,9 @@ const SetPassword = () => {
           secured your account
         </div>
       </h2>
-      <HomeLogoLink height={"80"} className="h-20 mt-4 inline-block w-full" />
-
-      {/* <a href="#" className=" mt-4 inline-block w-full">
-        <svg
-          height={80}
-          viewBox="0 0 155 124"
-          className="w-full "
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M56.6087 0L105.633 93H7.58413L56.6087 0Z" fill="#00E0FF" />
-          <path
-            d="M115.913 28.3044L149.763 93.0001H82.0628L115.913 28.3044Z"
-            fill="#6B00F2"
-          />
-        </svg>
-      </a> */}
+      <div className="flex justify-center mt-4">
+        <HomeLogoLink height={"80"} className=" inline-block h-20 w-20   " />
+      </div>
 
       <div className=" flex flex-col justify-center items-center  gap-2 mt-5 ">
         <div className="w-full m ">
@@ -44,21 +30,26 @@ const SetPassword = () => {
             <h2 className="text-second font-semibold tracking-wide">
               Set your password
             </h2>
-            <input
-              type="text"
-              className="w-full py-[0.8rem] px-3 rounded-lg font-medium text-sm input-shadow"
-              placeholder="Current password"
-            />
-            <input
-              type="text"
-              className="w-full py-[0.8rem] px-3 rounded-lg font-medium text-sm input-shadow"
-              placeholder="New password"
-            />
-            <input
-              type="text"
-              className="w-full py-[0.8rem] px-3 rounded-lg font-medium text-sm input-shadow"
-              placeholder="New password"
-            />
+
+            <div className="relative">
+              <input required type="text" className=" custom-input" />
+              <label htmlFor="" className="custom-label ">
+                Current Password
+              </label>
+            </div>
+
+            <div className="relative">
+              <input required type="text" className=" custom-input" />
+              <label htmlFor="" className="custom-label ">
+                Password
+              </label>
+            </div>
+            <div className="relative">
+              <input required type="text" className=" custom-input" />
+              <label htmlFor="" className="custom-label ">
+                Change Password
+              </label>
+            </div>
           </div>
 
           <div className="w-full mt-7  ">

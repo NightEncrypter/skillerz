@@ -16,6 +16,7 @@ import CustomerReviews from "../Reviews/CustomerReviews";
 import HomeCaraousel from "../caraousels/HomeCaraousel";
 import LandingSvg from "../svgs/LandingSvg";
 import Smile from "../../assets/img/smile.png";
+import HomeLogoLink from "../logoLinks/HomeLogoLink";
 
 const Home = () => {
   const [openModal, setModal] = useState<boolean>(false);
@@ -83,24 +84,22 @@ const Home = () => {
           </div>
         </h2>
         <header className="sm:flex item-center justify-between px-10 w-full h-[72px] bg-[#F4FAFF] hidden  ">
-          <a href="/" className=" flex justify-center  items-center mt-3">
-            <LogoSvg className="h-14 w-14" />
-          </a>
+          <HomeLogoLink className="  h-14 inline-block mt-4" />
 
           <nav className="w-[35%] flex items-center ml-auto ">
             <ul className="flex justify-between items-center  w-full">
               <li>
-                <NavLink className={"font-medium"} to={"/"}>
+                <NavLink className={"head-link"} to={"/"}>
                   Home
                 </NavLink>
               </li>
               <li>
-                <NavLink className={"font-medium"} to={"/"}>
+                <NavLink className={"head-link"} to={"/"}>
                   Services
                 </NavLink>
               </li>
               <li>
-                <NavLink className={"font-medium"} to={"/"}>
+                <NavLink className={"head-link"} to={"/"}>
                   About
                 </NavLink>
               </li>
@@ -120,7 +119,7 @@ const Home = () => {
               />
             </div>
             <a
-              href="/"
+              href="/candidates/login"
               className="py-2 text-[#00DDFB] font-medium  px-5  rounded-lg text-sm  capitalize tracking-widest  "
             >
               Login

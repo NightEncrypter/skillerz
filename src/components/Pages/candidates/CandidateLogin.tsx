@@ -1,5 +1,6 @@
 import { Icon } from "@iconify/react";
 import { Link } from "react-router-dom";
+import CustomInput from "../../CustomInput/CustomInput";
 import HomeLogoLink from "../../logoLinks/HomeLogoLink";
 const CandidateLogin = () => {
   return (
@@ -31,16 +32,8 @@ const CandidateLogin = () => {
         <HomeLogoLink height="80" className="mt-4" />
         <div className="w-full m ">
           <div className="flex flex-col gap-5 mb-5 ">
-            <input
-              type="text"
-              className="w-full py-3 px-3 rounded-lg font-medium text-sm input-shadow "
-              placeholder="Enter your email"
-            />
-            <input
-              type="text"
-              className="w-full py-3 px-3 rounded-lg font-medium text-sm input-shadow "
-              placeholder="Enter your password"
-            />
+            <CustomInput label="Enter your email" />
+            <CustomInput label="Enter your password" />
           </div>
 
           <div className="w-full  ">

@@ -62,7 +62,7 @@ const CustomerReviews = () => {
           </div>
         ))}
       </div>
-      <div className="flex justify-between max-w-[14rem] md:max-w-[500px]  mx-auto relative z-[1]">
+      <div className="flex justify-between max-w-[14rem] md:max-w-[510px]  mx-auto relative z-[1]">
         {[1, 2, 3].map((v, i) => (
           <div key={i} className={`flex flex-col gap-[2px]  `}>
             {new Array(70).fill(0).map((x, i) => (

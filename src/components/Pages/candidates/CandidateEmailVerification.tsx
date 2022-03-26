@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import cn from "classnames";
 import HomeLogoLink from "../../logoLinks/HomeLogoLink";
+import CustomInput from "../../CustomInput/CustomInput";
 const CandidateEmailVerification = () => {
   const [openModal, setModal] = useState<boolean>(false);
   const [toggle, setToggle] = useState<boolean>(false);
@@ -31,11 +32,7 @@ const CandidateEmailVerification = () => {
           <HomeLogoLink height="80" className={"my-8"} />
           <div className="w-full m ">
             <div className="flex flex-col gap-5 mb-5">
-              <input
-                type="text"
-                className="w-full py-3 px-3 rounded-lg font-medium text-sm input-shadow"
-                placeholder="Enter your email"
-              />
+              <CustomInput label="Enter your email" />
             </div>
 
             <div className="w-full  ">
