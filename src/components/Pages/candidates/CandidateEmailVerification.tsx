@@ -33,7 +33,7 @@ const CandidateEmailVerification = () => {
         </h2>
 
         <div className=" flex flex-col justify-center items-center  gap-2 mt-4 ">
-          <HomeLogoLink height="80" className={"my-8"} />
+          <HomeLogoLink height="80" className={"mb-8"} />
           <div className="w-full m ">
             <div className="flex flex-col gap-5 mb-5">
               <CustomInput

@@ -34,7 +34,7 @@ const CandidateLogin = () => {
       </svg> */}
       <div className=" flex flex-col justify-center items-center mt-6    ">
         {/* <LogoSvg height={"80"} /> */}
-        <HomeLogoLink height="80" className="mt-4" />
+        <HomeLogoLink height="80" className=" mb-8" />
         <div className="w-full m ">
           <div className="flex flex-col gap-5 mb-5 ">
             <CustomInput

@@ -1,3 +1,5 @@
+import cn from "classnames";
+
 const HomeLogoLink = ({
   height,
   link,
@@ -8,7 +10,7 @@ const HomeLogoLink = ({
   className?: string;
 }) => {
   return (
-    <a href={link ? link : "/"} className={className}>
+    <a href={link ? link : "/"} className={cn(className, " inline-block")}>
       <svg
         height={height ? height : "20"}
         viewBox="0 0 155 124"

@@ -268,7 +268,7 @@ input:focus {
   @apply transition opacity-80;
 }
 input:focus ~ .input-icon > .input-icon {
-  @apply transition opacity-100 text-[#6B00F2];
+  @apply transition opacity-100 text-[#6B00F2] -rotate-45;
   /* fill: #00e0ff; */
   /* fill: #0047ff; */
 }
