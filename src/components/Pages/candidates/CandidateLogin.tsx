@@ -1,8 +1,13 @@
 import { Icon } from "@iconify/react";
+import { ChangeEvent } from "react";
 import { Link } from "react-router-dom";
 import CustomInput from "../../CustomInput/CustomInput";
+import PasswordInput from "../../CustomInput/PasswordInput";
 import HomeLogoLink from "../../logoLinks/HomeLogoLink";
 const CandidateLogin = () => {
+  const handlerChange = (e: ChangeEvent<HTMLInputElement>) => {
+    console.log(e);
+  };
   return (
     <div className="px-8 bg-[#F4FAFF]  py-4 h-full sm:min-h-0 min-h-screen  ">
       <h2 className="flex  flex-wrap  ">
@@ -32,8 +37,16 @@ const CandidateLogin = () => {
         <HomeLogoLink height="80" className="mt-4" />
         <div className="w-full m ">
           <div className="flex flex-col gap-5 mb-5 ">
-            <CustomInput label="Enter your email" />
-            <CustomInput label="Enter your password" />
+            <CustomInput
+              handlerChange={handlerChange}
+              label="Enter your email"
+              icon="fluent:mail-all-read-24-filled"
+            />
+            <PasswordInput
+              label="Enter your password"
+              icon="ic:sharp-key"
+              passwordClosedIcon="ic:sharp-key-off"
+            />
           </div>
 
           <div className="w-full  ">

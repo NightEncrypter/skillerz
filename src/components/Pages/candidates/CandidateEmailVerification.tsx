@@ -1,5 +1,5 @@
 import { Icon } from "@iconify/react";
-import React, { useState } from "react";
+import React, { ChangeEvent, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import cn from "classnames";
 import HomeLogoLink from "../../logoLinks/HomeLogoLink";
@@ -14,6 +14,10 @@ const CandidateEmailVerification = () => {
     if (openModal) {
       navigation("/candidates/set_password");
     }
+  };
+
+  const handlerChange = (e: ChangeEvent<HTMLInputElement>) => {
+    console.log(e);
   };
   return (
     <>
@@ -32,7 +36,11 @@ const CandidateEmailVerification = () => {
           <HomeLogoLink height="80" className={"my-8"} />
           <div className="w-full m ">
             <div className="flex flex-col gap-5 mb-5">
-              <CustomInput label="Enter your email" />
+              <CustomInput
+                handlerChange={handlerChange}
+                label="Enter your email"
+                icon="fluent:mail-all-read-24-filled"
+              />
             </div>
 
             <div className="w-full  ">

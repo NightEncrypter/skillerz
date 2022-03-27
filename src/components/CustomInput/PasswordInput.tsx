@@ -1,22 +1,22 @@
 import { Icon } from "@iconify/react";
-import { ChangeEvent } from "react";
+import { useState } from "react";
 
 const CustomInput = ({
   label,
   icon,
-  handlerChange,
+  passwordClosedIcon,
 }: {
   label: string;
   icon: string;
-  handlerChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  passwordClosedIcon: string;
 }) => {
+  const [active, setActive] = useState<boolean>(false);
   return (
-    <div className="relative flex justify-between items-center bg-white rounded-md main-input-content  ">
+    <div className="  relative flex justify-between items-center bg-white rounded-xl main-input-content  ">
       <input
         required
-        type={"text"}
+        type={active ? "text" : "password"}
         className=" custom-input rounded-md "
-        onChange={handlerChange}
       />
       <label htmlFor="" className="custom-label ">
         {label}
@@ -24,8 +24,12 @@ const CustomInput = ({
       <button
         className="input-icon"
         style={{ width: 20, height: 20, color: "grey", marginRight: 16 }}
+        onClick={() => setActive((prev) => !prev)}
       >
-        <Icon icon={icon} className="w-full h-full" />
+        <Icon
+          icon={active ? passwordClosedIcon : icon}
+          className="w-full h-full"
+        />
       </button>
     </div>
   );
