@@ -245,18 +245,16 @@ input:focus {
   @apply w-full py-[1.35rem]  pb-[0.5rem]  px-3 rounded-lg  text-sm  transition bg-transparent;
 }
 .custom-label {
-  @apply inline-block absolute text-sm text-gray-300  bottom-3 left-3 pointer-events-none tracking-wider transition duration-300;
+  @apply inline-block absolute text-sm text-gray-400 opacity-90  bottom-3 left-3 pointer-events-none tracking-wide transition duration-300 font-light;
 }
 
-.custom-input:focus {
-}
-.custom-input:focus + label,
-.custom-input:valid + label {
+.custom-input:focus ~ label,
+.custom-input:valid ~ label {
   @apply text-[#6B00F2];
   transition: 0.3s ease-in;
   transform: translateY(-19px);
   /* background-color: #fff; */
-  border-radius: 10px;
+  /* border-radius: 10px; */
   padding: 0 10px;
   font-size: 10px;
   font-weight: 600;
@@ -267,10 +265,14 @@ input:focus {
   margin-bottom: 2px;
 }
 .input-icon {
-  @apply opacity-40 transition;
+  @apply transition opacity-80;
 }
-.custom-input:focus ~ .input-icon {
-  @apply transition opacity-100 text-[aqua];
+input:focus ~ .input-icon > .input-icon {
+  @apply transition opacity-100 text-[#6B00F2];
   /* fill: #00e0ff; */
   /* fill: #0047ff; */
+}
+
+.main-input-content > input:focus {
+  box-shadow: -1px 0 15px 0px rgba(0, 124, 255, 0.2);
 }

@@ -59,13 +59,16 @@ const Home = () => {
           <LogoSvg height={"60"} />
           <button
             onClick={() => setHam((prev) => !prev)}
-            className="transition duration-200  hamAnim md:hidden "
+            className={cn("transition duration-200  hamAnim md:hidden ", {})}
           >
             <Icon
               fontSize={28}
               width={32}
               icon={"ci:menu-alt-02"}
               color={"#005ECE"}
+              className={cn("transition duration-200", {
+                "rotate-45 ": !ham,
+              })}
             />
           </button>
         </header>
@@ -263,8 +266,9 @@ const Home = () => {
       <div
         // onClick={() => setHam(true)}
         className={cn(" transition duration-200 fixed  ", {
-          "-translate-x-full z-[-1] pointer-events-none overflow-y-auto ": ham,
-          "-translate-x-0  inset-0 w-full bg-[rgba(0,0,0,0.8)] z-[1] pointer-events-auto overflow-y-hidden ":
+          "-translate-x-full z-[-1] pointer-events-none overflow-y-auto transition ":
+            ham,
+          "-translate-x-0  inset-0 w-full bg-[rgba(0,0,0,0.8)] z-[1] pointer-events-auto overflow-y-hidden transition ":
             !ham,
         })}
       >

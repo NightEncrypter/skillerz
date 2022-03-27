@@ -12,7 +12,7 @@ const CustomInput = ({
 }) => {
   const [active, setActive] = useState<boolean>(false);
   return (
-    <div className="  relative flex justify-between items-center bg-white rounded-xl main-input-content  ">
+    <div className="  relative flex justify-between items-center bg-white rounded-md main-input-content  ">
       <input
         required
         type={active ? "text" : "password"}
@@ -23,12 +23,12 @@ const CustomInput = ({
       </label>
       <button
         className="input-icon"
-        style={{ width: 20, height: 20, color: "grey", marginRight: 16 }}
+        style={{ width: 20, height: 20, color: "grey", marginInline: 16 }}
         onClick={() => setActive((prev) => !prev)}
       >
         <Icon
           icon={active ? passwordClosedIcon : icon}
-          className="w-full h-full"
+          className="w-full h-full input-icon"
         />
       </button>
     </div>
