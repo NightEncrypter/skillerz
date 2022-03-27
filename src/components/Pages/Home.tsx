@@ -19,7 +19,7 @@ import Smile from "../../assets/img/smile.png";
 import HomeLogoLink from "../logoLinks/HomeLogoLink";
 
 const Home = () => {
-  const [openModal, setModal] = useState<boolean>(false);
+  const [openModal, setModal] = useState<boolean>(true);
   const [ham, setHam] = useState<boolean>(true);
   const navigation = useNavigate();
   const controlScroll = useRef<HTMLDivElement>(null);
@@ -68,6 +68,7 @@ const Home = () => {
               color={"#005ECE"}
               className={cn("transition duration-200", {
                 "rotate-45 ": !ham,
+                "rotate-0 ": ham,
               })}
             />
           </button>
@@ -265,27 +266,39 @@ const Home = () => {
       {/* SIDEBAR ITEM */}
       <div
         // onClick={() => setHam(true)}
-        className={cn(" transition duration-200 fixed  ", {
-          "-translate-x-full z-[-1] pointer-events-none overflow-y-auto transition ":
-            ham,
-          "-translate-x-0  inset-0 w-full bg-[rgba(0,0,0,0.8)] z-[1] pointer-events-auto overflow-y-hidden transition ":
+        // className={cn(" transition duration-200 fixed -translate-x-full", {
+        //   "transition duration-200 z-[-1]   w-0 ": ham,
+        //   " transition duration-200 translate-x-0  inset-0  bg-[rgba(0,0,0,0.7)] z-[1] pointer-events-auto  ":
+        //     !ham,
+        // })}
+        className={cn(" transition-all duration-200 fixed inset-0  ", {
+          "-translate-x-full z-[-1]    w-0  opacity-0  ": ham,
+          "translate-x-0   w-full bg-[rgba(0,0,0,0.8)] z-[1] pointer-events-auto    ":
             !ham,
         })}
       >
-        <div className="sidebar-gradient transition duration-200 w-[35%] h-full py-4  z-[2] fixed   ">
-          <div className="justify-end flex px-4">
-            <button
-              onClick={() => setHam(true)}
-              className="w-6 h-6 bg-white rounded-full p-1 shadow-md"
-            >
-              <Icon
-                className="w-full h-full"
-                icon={"clarity:close-line"}
-                color={"#FF3E3E"}
-              />
-            </button>
-          </div>
-          <ul className="flex flex-col justify-between gap-4  mt-4 overflow-hidden">
+        <div
+          className={cn(
+            "sidebar-gradient transition relative delay-500  duration-1000    py-4      ",
+            {
+              "w-[35%] z-[2] h-full delay-500 ": !ham,
+              "w-0   ": ham,
+            }
+          )}
+        >
+          {/* <div> */}
+          <button
+            onClick={() => setHam((prev) => !prev)}
+            className="w-6 h-6 bg-white rounded-full p-1 shadow-md transition hover:scale-125 absolute top-6 -right-3 "
+          >
+            <Icon
+              className="w-full h-full"
+              icon={"clarity:close-line"}
+              color={"#FF3E3E"}
+            />
+          </button>
+          {/* </div> */}
+          <ul className="flex flex-col justify-between gap-4  mt-8 overflow-hidden">
             <li className="w-full">
               <Link className="sidebar-link " to="">
                 Home
