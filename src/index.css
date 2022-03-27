@@ -245,7 +245,7 @@ input:focus {
   @apply w-full py-[1.35rem]  pb-[0.5rem]  px-3 rounded-lg  text-sm  transition bg-transparent;
 }
 .custom-label {
-  @apply inline-block absolute text-sm text-gray-400 opacity-90  bottom-3 left-3 pointer-events-none tracking-wide transition duration-300 font-light;
+  @apply inline-block absolute text-sm text-gray-400 opacity-90  bottom-3 left-3 pointer-events-none tracking-wide transition duration-300;
 }
 
 .custom-input:focus ~ label,
