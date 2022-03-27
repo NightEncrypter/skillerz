@@ -70,7 +70,7 @@ const CustomerReviews = () => {
                 </div>
               ))}
             </div>
-            <div className="flex justify-between sm:max-w-md    mx-auto relative z-[1] md:-top-9 max-w-xs ">
+            <div className="flex justify-between sm:max-w-md    mx-auto relative z-[1] md:-top-9 max-w-[15rem] ">
               {new Array(3).fill(0).map((v, i) => (
                 <div
                   key={i}

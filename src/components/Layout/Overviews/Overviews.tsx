@@ -27,7 +27,7 @@ const Overviews = () => {
         What we are doing ??
       </h2>
 
-      <div className="max-w-xs mx-auto md-container-7x md:mt-8 md:grid sm:grid-cols-2 md:grid-cols-3 md:gap-5">
+      <div className="max-w-[18rem] mx-auto md-container-7x md:mt-8 md:grid sm:grid-cols-2 md:grid-cols-3 md:gap-5">
         {/* Card */}
         {cards.map((card, i) => (
           <div
