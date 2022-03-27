@@ -23,7 +23,7 @@ const CustomInput = ({
       </label>
       <button
         className="input-icon"
-        style={{ width: 20, height: 20, color: "grey", marginInline: 16 }}
+        style={{ width: 20, height: 20, color: "grey", marginInline: 10 }}
         onClick={() => setActive((prev) => !prev)}
       >
         <Icon
