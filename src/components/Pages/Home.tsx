@@ -54,7 +54,7 @@ const Home = () => {
           "overflow-auto": ham,
         })}
       >
-        <header className="sticky  top-0 left-0 right-0 bg-main-light flex justify-between items-center px-4 md:hidden ">
+        <header className="sticky  top-0 left-0 right-0 bg-main-light  flex justify-between items-center px-4 md:hidden ">
           <div className="w-[28px] h-[28px] sm:hidden z-50"></div>
           <LogoSvg height={"60"} />
           <button
@@ -87,53 +87,55 @@ const Home = () => {
             designed to flip recruitment table
           </div>
         </h2>
-        <header className="sm:flex item-center justify-between px-10 w-full h-[72px] bg-[#F4FAFF] hidden  ">
-          <HomeLogoLink className="  h-14 inline-block mt-4" />
+        <header className=" md-container-7x  ">
+          <div className=" sm:flex item-center justify-between px-10 w-full h-[72px] bg-[#F4FAFF] hidden">
+            <HomeLogoLink className="  h-14 inline-block mt-4" />
 
-          <nav className="w-[35%] flex items-center ml-auto ">
-            <ul className="flex justify-between items-center  w-full">
-              <li>
-                <NavLink className={"head-link"} to={"/"}>
-                  Home
-                </NavLink>
-              </li>
-              <li>
-                <NavLink className={"head-link"} to={"/"}>
-                  Services
-                </NavLink>
-              </li>
-              <li>
-                <NavLink className={"head-link"} to={"/"}>
-                  About
-                </NavLink>
-              </li>
-              <li></li>
-            </ul>
-          </nav>
+            <nav className="w-[35%] flex items-center ml-auto ">
+              <ul className="flex justify-between items-center  w-full">
+                <li>
+                  <NavLink className={"head-link"} to={"/"}>
+                    Home
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink className={"head-link"} to={"/"}>
+                    Services
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink className={"head-link"} to={"/"}>
+                    About
+                  </NavLink>
+                </li>
+                <li></li>
+              </ul>
+            </nav>
 
-          <div className="flex items-center justify-between w-[43%] ">
-            <div className="flex items-center bg- rounded-md gap-4 pl-2 bg-gray-200 ">
-              <Icon icon="bi:search" color="#CCCCCC" />
-              <input
-                type="text"
-                name=""
-                id=""
-                className="rounded-xl bg-transparent h-full py-[0.5rem] tracking-wide text-sm "
-                placeholder="Search..."
-              />
+            <div className="flex items-center justify-between w-[43%] ">
+              <div className="flex items-center bg- rounded-md gap-4 pl-2 bg-gray-200 ">
+                <Icon icon="bi:search" color="#CCCCCC" />
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  className="rounded-xl bg-transparent h-full py-[0.5rem] tracking-wide text-sm "
+                  placeholder="Search..."
+                />
+              </div>
+              <a
+                href="/candidates/login"
+                className="py-2 text-[#00DDFB] font-medium  px-5  rounded-lg text-sm  capitalize tracking-widest  "
+              >
+                Login
+              </a>
+              <button
+                className="py-3  main_btn_color px-5  rounded-lg   text-white text-xs  capitalize tracking-widest "
+                onClick={redirect_to_login}
+              >
+                Request a call
+              </button>
             </div>
-            <a
-              href="/candidates/login"
-              className="py-2 text-[#00DDFB] font-medium  px-5  rounded-lg text-sm  capitalize tracking-widest  "
-            >
-              Login
-            </a>
-            <button
-              className="py-[0.6rem]  main_btn_color px-5  rounded-lg   text-white text-sm  capitalize tracking-widest "
-              onClick={redirect_to_login}
-            >
-              Request a call
-            </button>
           </div>
         </header>
         <div className=" hidden md:flex items-center  justify-between w-full px-[80px] md:mx-auto md:max-w-[1400px] h-full min-h-[90vh]">
@@ -198,7 +200,7 @@ const Home = () => {
         </div>
         {/* SVG1 */}
         <HomeLogo1 />
-        <div className="flex justify-center mt-4    ">
+        <div className="flex justify-center     ">
           <button
             className=" w-[50%] block main_btn main_btn_color  py-[0.60rem] text-white text-sm  capitalize tracking-widest hover:-translate-y-2  shadow1 transition duration-200 btn-animation sm:hidden"
             onClick={redirect_to_login}
@@ -207,7 +209,7 @@ const Home = () => {
           </button>
         </div>
         {/* WIDTH INFO */}
-        <div className="w-full flex gap-3 justify-between items-center p-4 px-4  bg-[#D3E7FF]  mt-8 sm:hidden">
+        {/* <div className="w-full flex gap-3 justify-between items-center p-4 px-4  bg-[#D3E7FF]  mt-8 sm:hidden">
           <h4 className="text-sm text-[#0079FA] font-medium  ">300,000+</h4>
           <div className="flex-1 border-r-[1px] border-l-[1px] border-[#0079FA] self-center px-2  ">
             <div className="">
@@ -219,9 +221,9 @@ const Home = () => {
             <h3 className="text-sm text-[#0079FA] font-medium">5000+</h3>
             <p className="text-xs">Hired per month using</p>
           </div>
-        </div>
+        </div> */}
 
-        <section className="px-8 md:px-12 md:max-w-7xl md:mx-auto ">
+        <section className="px-8 md:px-12  ">
           <Overviews />
           <CustomerReviews />
         </section>

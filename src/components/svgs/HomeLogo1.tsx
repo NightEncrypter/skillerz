@@ -7,7 +7,7 @@ const HomeLogo1 = ({
 }) => {
   return (
     <svg
-      className={`${className} w-full svg-animation1  `}
+      className={`${className} w-full svg-animation1 sm:hidden  `}
       height={height ? height : "300"}
       // viewBox="0 0 244 176"
       viewBox="0 0 240 170"

@@ -1,8 +1,8 @@
 const Earth = () => {
   return (
     <svg
-      className="h-full w-[80%] md:w-[45%] relative z-[1]  "
-      viewBox="0 0 253 121"
+      className="h-full w-full md:w-[70%] relative z-[1]  "
+      viewBox="0 0 253 125"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >

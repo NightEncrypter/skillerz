@@ -35,6 +35,14 @@ input:focus {
     #0079fa 100%
   );
 }
+.request_btn_color {
+  background: linear-gradient(
+    270deg,
+    #001b37 -11.67%,
+    #004083 49.75%,
+    #0079fa 100%
+  );
+}
 .card_btn_color {
   background: linear-gradient(
     270deg,
@@ -271,4 +279,11 @@ input:focus ~ .input-icon > .input-icon {
 
 .main-input-content > input:focus {
   box-shadow: -1px 2px 15px 0px rgba(0, 124, 255, 0.15);
+}
+
+.md-container-7x {
+  @apply md:max-w-7xl md:mx-auto;
+}
+.md-container-6x {
+  @apply md:max-w-6xl md:mx-auto;
 }
