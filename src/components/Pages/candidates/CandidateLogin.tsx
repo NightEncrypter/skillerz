@@ -9,7 +9,7 @@ const CandidateLogin = () => {
     console.log(e);
   };
   return (
-    <div className="px-8 bg-[#F4FAFF]  py-4 h-full sm:min-h-0 min-h-screen  ">
+    <div className="px-6 bg-[#F4FAFF]  py-4 h-full sm:min-h-0 min-h-screen  ">
       <h2 className="flex  flex-wrap  ">
         <div className=" font-medium text-[#C623FF] text-3xl tracking-wide w-full  ">
           Let's
