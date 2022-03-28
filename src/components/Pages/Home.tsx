@@ -1,6 +1,6 @@
 import {
   // useEffect,
-  useRef,
+  // useRef,
   useState,
 } from "react";
 import cn from "classnames";
@@ -17,12 +17,13 @@ import HomeCaraousel from "../caraousels/HomeCaraousel";
 import LandingSvg from "../svgs/LandingSvg";
 import Smile from "../../assets/img/smile.png";
 import HomeLogoLink from "../logoLinks/HomeLogoLink";
+import RecruiterCard from "../Reviews/RecruiterCard";
 
 const Home = () => {
   const [openModal, setModal] = useState<boolean>(true);
   const [ham, setHam] = useState<boolean>(true);
   const navigation = useNavigate();
-  const controlScroll = useRef<HTMLDivElement>(null);
+  // const controlScroll = useRef<HTMLDivElement>(null);
 
   // useEffect(() => {
   //   if (controlScroll.current) {
@@ -48,13 +49,13 @@ const Home = () => {
     <>
       <div
         // onScroll={onScroll}
-        ref={controlScroll}
+        // ref={controlScroll}
         className={cn("bg-main-light min-h-screen     w-full", {
           "overflow-y-hidden": !ham,
           "overflow-auto": ham,
         })}
       >
-        <header className="sticky  top-0 left-0 right-0 bg-main-light  flex justify-between items-center px-4 md:hidden ">
+        <header className="sticky  top-0 left-0 right-0  flex justify-between items-center px-4 md:hidden ">
           <div className="w-[28px] h-[28px] sm:hidden z-50"></div>
           <LogoSvg height={"60"} />
           <button
@@ -232,6 +233,8 @@ const Home = () => {
         </section>
         <section className="px-8  md:px-12 md:max-w-7xl md:mx-auto">
           <SimpleCard />
+
+          <RecruiterCard />
         </section>
         <Footer />
       </div>

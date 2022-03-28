@@ -74,9 +74,9 @@ const CustomerReviews = () => {
               {new Array(3).fill(0).map((v, i) => (
                 <div
                   key={i}
-                  className={`flex ${
-                    i === 0 && "hidden sm:block"
-                  } flex-col gap-[2px]  `}
+                  className={`flex
+                
+                   flex-col gap-[2px]  `}
                 >
                   {new Array(85).fill(0).map((x, i) => (
                     <div className="flex gap-[1.2px]">
