@@ -9,7 +9,7 @@ const CustomerReviews = () => {
       </h2>
       <div className="md-container-6x">
         <div className="sm:flex  sm:justify-between sm:items-center md:mt-10">
-          <div className=" sm:w-[60%]">
+          <div className=" xl:w-[68%] md:w-[72%] sm:w-[68%]   ">
             <div className=" grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-5 ">
               {[1, 2, 3].map((b, i) => (
                 <div
@@ -42,14 +42,14 @@ const CustomerReviews = () => {
                     hic,
                   </p>
                   <div className="flex items-center gap-2 justify-between mt-1 md:mt-3 ">
-                    <h4 className="font-semibold text-[0.5rem] md:text-sm ">
+                    <h4 className="font-semibold  text-xs ">
                       aliyalima124@gmail.com
                     </h4>
                   </div>
                   <div className="flex gap-2 md:gap-4 items-center justify-end mt-2">
                     <a
                       href="https://google.com"
-                      className="hover:scale-[1.1] transition md:w-8 md:h-8 h-4 w-4"
+                      className="hover:scale-[1.1] transition sm:w-5 sm:h-5 md:w-6 md:h-6 h-4 w-4"
                     >
                       <Icon
                         icon="logos:google-gmail"
@@ -58,7 +58,7 @@ const CustomerReviews = () => {
                     </a>
                     <a
                       href="https://www.facebook.com"
-                      className="hover:scale-[1.05] transition md:w-8 md:h-8 h-4 w-4"
+                      className="hover:scale-[1.05] transition sm:w-5 sm:h-5 md:w-6 md:h-6 h-4 w-4"
                     >
                       <Icon
                         icon="akar-icons:facebook-fill"
@@ -70,7 +70,7 @@ const CustomerReviews = () => {
                 </div>
               ))}
             </div>
-            <div className="flex justify-between sm:max-w-md    mx-auto relative z-[1] md:-top-9 max-w-[15rem] ">
+            <div className="flex justify-between md:max-w-md sm:max-w-[16rem]    mx-auto relative z-[1] md:-top-9 max-w-[15rem] ">
               {new Array(3).fill(0).map((v, i) => (
                 <div
                   key={i}
@@ -95,6 +95,149 @@ const CustomerReviews = () => {
             <div className=" flex flex-col  justify-center items-center  relative -top-[10rem] md:-top-[10rem] z-[1]   ">
               <Earth />
 
+              <div className="absolute md:top-[13rem] top-40 md:right-[40%] right-[25%] z-20">
+                <div className=" w-8 h-8 relative  hover:scale-105 transition hover:-translate-y-1">
+                  <Icon
+                    icon="carbon:location-filled"
+                    color="orange"
+                    className="w-full h-full"
+                  />
+                  <img
+                    src={Smile}
+                    alt=""
+                    className="rounded-full p-1 w-6 h-6 absolute top-0 left-1"
+                  />
+                </div>
+              </div>
+              <div className="absolute md:left-[20%] md:top-[12rem] top-40 left-[5%] z-20">
+                <div className=" w-8 h-8 relative  hover:scale-105 transition hover:-translate-y-1 ">
+                  <Icon
+                    icon="carbon:location-filled"
+                    color="orange"
+                    className="w-full h-full"
+                  />
+                  <img
+                    src={Smile}
+                    alt=""
+                    className="rounded-full p-1 w-6 h-6 absolute top-0 left-1"
+                  />
+                </div>
+              </div>
+
+              <div className="absolute md:left-[35%] md:top-28 top-36 left-[25%] z-20">
+                <div className=" w-10 h-10 relative  hover:scale-105 transition hover:-translate-y-1">
+                  <Icon
+                    icon="carbon:location-filled"
+                    color="blue"
+                    className="w-full h-full"
+                  />
+                  <img
+                    src={Smile}
+                    alt=""
+                    className="rounded-full p-1 w-7 h-7 absolute top-1 left-[0.4rem]"
+                  />
+                </div>
+              </div>
+              <div className="absolute right-[5%]  top-[10rem]  sm:top-[13rem] sm:right-[25%] z-20">
+                <div className=" w-10 h-10 relative  hover:scale-105 transition hover:-translate-y-1">
+                  <Icon
+                    icon="carbon:location-filled"
+                    color="blue"
+                    className="w-full h-full"
+                  />
+                  <img
+                    src={Smile}
+                    alt=""
+                    className="rounded-full p-1 w-7 h-7 absolute top-1 left-[0.4rem]"
+                  />
+                </div>
+              </div>
+              <div className="absolute top-24 right-[45%] z-20">
+                <div className=" w-10 h-10 relative hover:scale-105 transition hover:-translate-y-1 ">
+                  <Icon
+                    icon="carbon:location-filled"
+                    color="brown"
+                    className="w-full h-full"
+                  />
+                  <img
+                    src={Smile}
+                    alt=""
+                    className="rounded-full p-1 w-7 h-7 absolute top-1 left-[0.4rem]"
+                  />
+                </div>
+              </div>
+
+              <div className="absolute md:top-16 top-10 right-[25%] z-20">
+                <div className=" w-10 h-10 relative hover:scale-105 transition hover:-translate-y-1 ">
+                  <Icon
+                    icon="carbon:location-filled"
+                    color="aqua"
+                    className="w-full h-full"
+                  />
+                  <img
+                    src={Smile}
+                    alt=""
+                    className="rounded-full p-1 w-7 h-7 absolute top-1 left-[0.4rem]"
+                  />
+                </div>
+              </div>
+              <div className="absolute md:top-14 top-10 left-[25%] z-20">
+                <div className=" w-10 h-10 relative  hover:scale-105 transition hover:-translate-y-1">
+                  <Icon
+                    icon="carbon:location-filled"
+                    color="green"
+                    className="w-full h-full"
+                  />
+                  <img
+                    src={Smile}
+                    alt=""
+                    className="rounded-full p-1 w-7 h-7 absolute top-1 left-[0.4rem]"
+                  />
+                </div>
+              </div>
+              <div className="absolute top-3 left-[45%] z-20">
+                <div className=" w-12 h-12 relative hover:scale-105 transition hover:-translate-y-1 ">
+                  <Icon
+                    icon="carbon:location-filled"
+                    color="red"
+                    className="w-full h-full"
+                  />
+                  <img
+                    src={Smile}
+                    alt=""
+                    className="rounded-full p-1 w-8 h-8 absolute top-1 left-2"
+                  />
+                </div>
+              </div>
+              <div className="absolute top-24 md:top-[13rem] md:left-[35%] left-[15%] z-20">
+                <div className=" w-8 h-8 relative hover:scale-105 transition hover:-translate-y-1 ">
+                  <Icon
+                    icon="carbon:location-filled"
+                    color="yellow"
+                    className="w-full h-full"
+                  />
+                  <img
+                    src={Smile}
+                    alt=""
+                    className="rounded-full p-1 w-6 h-6 absolute top-0 left-1"
+                  />
+                </div>
+              </div>
+              <div className="absolute top-24 md:right-[35%]  right-[15%] z-20">
+                <div className=" w-8 h-8 relative hover:scale-105 transition hover:-translate-y-1 ">
+                  <Icon
+                    icon="carbon:location-filled"
+                    color="purple"
+                    className="w-full h-full"
+                  />
+                  <img
+                    src={Smile}
+                    alt=""
+                    className="rounded-full p-1 w-6 h-6 absolute top-0 left-1"
+                  />
+                </div>
+              </div>
+
               <h3 className="text-center tracking-widest  md:text-2xl my-8  ">
                 We are{" "}
                 <span className="text-[#7C00A7] text-3xl md:text-5xl font-medium">
@@ -105,7 +248,7 @@ const CustomerReviews = () => {
             </div>
           </div>
 
-          <div className=" md:self-start md:w-[25%] md:justify-self-start hidden sm:block  ">
+          <div className=" md:self-start md:w-[25%] sm:w-[25%] self-start  justify-self-start hidden sm:block  ">
             <div
               className={` 
           
@@ -135,12 +278,9 @@ const CustomerReviews = () => {
                 asperiores quis accusamus ea, alias accusantium neque deserunt
                 ipsa molestiae harum aliquam quisquam consequatur, impedit rem
                 ipsum dolor sit amet consectetur, adipisicing elit. Facere
-                voluptatibus, consequuntur ipsa molestiae harum aliquam quisquam
-                consequatur, impedit commodi, natus libero hic doloribus
-                doloremque facilis eaque voluptas voluptatum odio fugit?
               </p>
               <div className="flex items-center gap-2 justify-between mt-1 md:mt-3 ">
-                <h4 className="font-semibold text-[0.5rem] md:text-sm ">
+                <h4 className="font-semibold text-[0.5rem] md:text-sm text-xs ">
                   aliyalima124@gmail.com
                 </h4>
               </div>

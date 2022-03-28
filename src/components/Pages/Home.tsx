@@ -1,4 +1,5 @@
 import {
+  useEffect,
   // useEffect,
   // useRef,
   useState,
@@ -8,7 +9,7 @@ import CookiesLogo from "../svgs/CookiesLogo";
 import LogoSvg from "../svgs/logoSvg";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { Icon } from "@iconify/react";
-import HomeLogo1 from "../svgs/HomeLogo1";
+// import HomeLogo1 from "../svgs/HomeLogo1";
 import Footer from "../Layout/Footer/Footer";
 import SimpleCard from "../Layout/Cards/SimpleCard";
 import Overviews from "../Layout/Overviews/Overviews";
@@ -18,6 +19,7 @@ import LandingSvg from "../svgs/LandingSvg";
 import Smile from "../../assets/img/smile.png";
 import HomeLogoLink from "../logoLinks/HomeLogoLink";
 import RecruiterCard from "../Reviews/RecruiterCard";
+import { MobHomeSvg } from "../svgs/MobHomeSvg";
 
 const Home = () => {
   const [openModal, setModal] = useState<boolean>(true);
@@ -25,22 +27,13 @@ const Home = () => {
   const navigation = useNavigate();
   // const controlScroll = useRef<HTMLDivElement>(null);
 
-  // useEffect(() => {
-  //   if (controlScroll.current) {
-  //     controlScroll.current.addEventListener("scroll", (e) => {
-  //       console.log(e, "scroll");
-  //     });
-  //   }
-  // }, [controlScroll]);
-
-  //   useEffect(() => {
-  //     controlScroll?.current.addEventListener('scroll', onScroll);
-  //     return () => controlScroll.current.removeEventListener('scroll', onScroll);
-  // },[]);
-
-  // const onScroll = () => {
-
-  // }
+  useEffect(() => {
+    if (!ham) {
+      document.body.style.overflowY = "hidden";
+    } else {
+      document.body.style.overflowY = "auto";
+    }
+  }, [ham]);
 
   const redirect_to_login = () => {
     navigation("candidates/login");
@@ -48,8 +41,6 @@ const Home = () => {
   return (
     <>
       <div
-        // onScroll={onScroll}
-        // ref={controlScroll}
         className={cn("bg-main-light min-h-screen     w-full", {
           "overflow-y-hidden": !ham,
           "overflow-auto": ham,
@@ -88,7 +79,7 @@ const Home = () => {
             designed to flip recruitment table
           </div>
         </h2>
-        <header className=" md-container-7x  ">
+        <header className=" md-container-7x  sm:hidden md:block ">
           <div className=" sm:flex item-center justify-between px-10 w-full h-[72px] bg-[#F4FAFF] hidden">
             <HomeLogoLink className="  h-14 inline-block mt-4" />
 
@@ -200,8 +191,11 @@ const Home = () => {
           </div>
         </div>
         {/* SVG1 */}
-        <HomeLogo1 />
-        <div className="flex justify-center     ">
+        <div className="w-full">
+          <MobHomeSvg />
+        </div>
+        {/* <HomeLogo1 /> */}
+        <div className="flex justify-center mb-8     ">
           <button
             className=" w-[50%] block main_btn main_btn_color  py-[0.60rem] text-white text-sm  capitalize tracking-widest hover:-translate-y-2  shadow1 transition duration-200 btn-animation sm:hidden"
             onClick={redirect_to_login}
@@ -210,19 +204,19 @@ const Home = () => {
           </button>
         </div>
         {/* WIDTH INFO */}
-        {/* <div className="w-full flex gap-3 justify-between items-center p-4 px-4  bg-[#D3E7FF]  mt-8 sm:hidden">
-          <h4 className="text-sm text-[#0079FA] font-medium  ">300,000+</h4>
+        <div className="w-full flex gap-3 justify-between items-center p-4 px-4  bg-[#D3E7FF]  mt-4">
+          <h4 className="text-xs text-[#0079FA] font-medium  ">300,000+</h4>
           <div className="flex-1 border-r-[1px] border-l-[1px] border-[#0079FA] self-center px-2  ">
             <div className="">
-              <h3 className="text-sm text-[#0079FA] font-medium">1 Million+</h3>
+              <h3 className="text-xs text-[#0079FA] font-medium">1 Million+</h3>
               <p className="text-xs">Applicants interviewed</p>
             </div>
           </div>
           <div className="flex-1">
-            <h3 className="text-sm text-[#0079FA] font-medium">5000+</h3>
+            <h3 className="text-xs text-[#0079FA] font-medium">5000+</h3>
             <p className="text-xs">Hired per month using</p>
           </div>
-        </div> */}
+        </div>
 
         <section className="px-8 md:px-12  ">
           <Overviews />

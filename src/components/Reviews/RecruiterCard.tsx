@@ -65,7 +65,7 @@ const RecruiterCard = () => {
                 <h3 className="  font-semibold text-sm sm:text-lg text-blue-700  ">
                   William Henry
                 </h3>
-                <p className="my-1 text-gray-400 text-[0.6rem] font-medium">
+                <p className="my-1 md:text-xs text-[#6F6F6F] text-[0.6rem] font-medium">
                   Management Officer
                 </p>
               </div>
