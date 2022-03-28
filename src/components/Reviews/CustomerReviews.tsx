@@ -42,7 +42,7 @@ const CustomerReviews = () => {
                     hic,
                   </p>
                   <div className="flex items-center gap-2 justify-between mt-1 md:mt-3 ">
-                    <h4 className="font-semibold  text-xs ">
+                    <h4 className="font-semibold  sm:text-xs text-[0.5rem]  ">
                       aliyalima124@gmail.com
                     </h4>
                   </div>
