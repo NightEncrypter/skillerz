@@ -95,7 +95,7 @@ const CustomerReviews = () => {
             <div className=" flex flex-col  justify-center items-center  relative -top-[10rem] md:-top-[10rem] z-[1]   ">
               <Earth />
 
-              <div className="absolute md:top-[13rem] top-32 md:right-[40%] right-[25%] z-20">
+              <div className="absolute md:top-[13rem] top-[7rem] md:right-[40%] right-[25%] z-20">
                 <div className=" w-5 h-5 sm:w-8 sm:h-8 relative  hover:scale-105 transition hover:-translate-y-1">
                   <Icon
                     icon="carbon:location-filled"
@@ -109,7 +109,7 @@ const CustomerReviews = () => {
                   />
                 </div>
               </div>
-              <div className="absolute md:left-[20%] md:top-[12rem] top-32 left-[5%] z-20">
+              <div className="absolute md:left-[20%] md:top-[12rem] top-[7rem] left-[5%] z-20">
                 <div className=" w-5 h-5 sm:w-8 sm:h-8 relative  hover:scale-105 transition hover:-translate-y-1 ">
                   <Icon
                     icon="carbon:location-filled"
@@ -124,7 +124,7 @@ const CustomerReviews = () => {
                 </div>
               </div>
 
-              <div className="absolute md:left-[35%] md:top-28 top-32 left-[25%] z-20">
+              <div className="absolute md:left-[35%] md:top-28 top-[5rem] left-[25%] z-20">
                 <div className=" sm:w-10 sm:h-10 w-8 h-8  relative  hover:scale-105 transition hover:-translate-y-1">
                   <Icon
                     icon="carbon:location-filled"
@@ -138,7 +138,7 @@ const CustomerReviews = () => {
                   />
                 </div>
               </div>
-              <div className="absolute right-[5%]  top-[7.5rem]  sm:top-[13rem] sm:right-[25%] z-20">
+              <div className="absolute right-[5%]  top-[5rem] sm:top-[13rem] sm:right-[25%] z-20">
                 <div className=" w-10 h-10 relative  hover:scale-105 transition hover:-translate-y-1">
                   <Icon
                     icon="carbon:location-filled"
