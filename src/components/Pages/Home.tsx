@@ -227,6 +227,7 @@ const Home = () => {
             <div className="h-[15rem] md:px-12 md:w-1/2 relative ">
               <img
                 src={VideoImage}
+                alt="video_thumbnail"
                 className="w-full h-full md:rounded-md object-cover"
               />
               <h2 className="  my-4 mb-8 text-[#519efc] font-medium  text-2xl    md:text-4xl absolute top-[40%] text-center left-[30%]">
