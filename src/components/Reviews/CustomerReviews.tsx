@@ -105,7 +105,7 @@ const CustomerReviews = () => {
                   <img
                     src={Smile}
                     alt=""
-                    className="rounded-full p-1 sm:w-6 sm:h-6 h-5 w-5 absolute -top-[0.15rem] left-0 "
+                    className="rounded-full p-1 sm:w-6 sm:h-6 h-5 w-5 absolute -top-[0.15rem] md:top-[0.10rem] md:left-1 left-0 "
                   />
                 </div>
               </div>
@@ -119,7 +119,7 @@ const CustomerReviews = () => {
                   <img
                     src={Smile}
                     alt=""
-                    className="rounded-full p-1 sm:w-6 sm:h-6 h-5 w-5 absolute -top-[0.15rem] left-0 "
+                    className="rounded-full p-1 sm:w-6 sm:h-6 h-5 w-5 absolute -top-[0.15rem] md:top-[0.10rem] md:left-1 left-0 "
                   />
                 </div>
               </div>
