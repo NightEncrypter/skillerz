@@ -238,7 +238,7 @@ const CustomerReviews = () => {
                 </div>
               </div>
 
-              <h3 className="text-center tracking-widest  md:text-2xl my-8  ">
+              <h3 className="text-center tracking-widest  md:text-2xl my-8 mb-[5rem] md:mb-8  ">
                 We are{" "}
                 <span className="text-[#7C00A7] text-3xl md:text-5xl font-medium">
                   growing
