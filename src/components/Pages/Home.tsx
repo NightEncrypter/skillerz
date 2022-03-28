@@ -4,6 +4,7 @@ import {
   // useRef,
   useState,
 } from "react";
+import VideoImage from "../../assets/img/unsplash.png";
 import cn from "classnames";
 import CookiesLogo from "../svgs/CookiesLogo";
 import LogoSvg from "../svgs/logoSvg";
@@ -191,6 +192,7 @@ const Home = () => {
           </div>
         </div>
         {/* SVG1 */}
+
         <div className="w-full">
           <MobHomeSvg />
         </div>
@@ -204,7 +206,7 @@ const Home = () => {
           </button>
         </div>
         {/* WIDTH INFO */}
-        <div className="w-full flex gap-3 justify-between items-center p-4 px-4  bg-[#D3E7FF]  mt-4">
+        <div className="w-full flex gap-3 justify-between items-center p-4 px-4  bg-[#D3E7FF]  mt-4 sm:hidden">
           <h4 className="text-xs text-[#0079FA] font-medium  ">300,000+</h4>
           <div className="flex-1 border-r-[1px] border-l-[1px] border-[#0079FA] self-center px-2  ">
             <div className="">
@@ -217,6 +219,22 @@ const Home = () => {
             <p className="text-xs">Hired per month using</p>
           </div>
         </div>
+        <section className="my-12 ">
+          {/* <div className="md:px-10 px-8"> */}
+
+          {/* </div> */}
+          <div className="w-full flex justify-center">
+            <div className="h-[15rem] md:px-12 md:w-1/2 relative ">
+              <img
+                src={VideoImage}
+                className="w-full h-full md:rounded-md object-cover"
+              />
+              <h2 className="  my-4 mb-8 text-[#519efc] font-medium  text-2xl    md:text-4xl absolute top-[40%] text-center left-[30%]">
+                Explore our Work
+              </h2>
+            </div>
+          </div>
+        </section>
 
         <section className="px-8 md:px-12  ">
           <Overviews />

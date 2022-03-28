@@ -63,7 +63,9 @@ const SimpleCard = () => {
           </span>
         </div>
       </div>
-
+      <h2 className="md:text-2xl my-4 mb-8 text-[#0069E7] font-medium border-b-[0.1px]  border-blue-300 w-fit text-sm">
+        Structured based Solutions
+      </h2>
       <div className="grid grid-cols-2 md:grid-cols-3 sm:grid-cols-3 gap-5 ">
         {cards.map((card, i) => (
           <div

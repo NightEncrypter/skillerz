@@ -1,5 +1,6 @@
 import { Icon } from "@iconify/react";
 import { useNavigate } from "react-router-dom";
+import PasswordInput from "../../CustomInput/PasswordInput";
 import HomeLogoLink from "../../logoLinks/HomeLogoLink";
 
 const SetPassword = () => {
@@ -7,6 +8,9 @@ const SetPassword = () => {
 
   const submitPass = () => {
     navigation(-1);
+  };
+  const changePassword = () => {
+    navigation('/candidates/resume');
   };
   return (
     <div className="px-8 bg-[#F4FAFF]  py-2 h-full sm:min-h-0 min-h-screen ">
@@ -30,30 +34,25 @@ const SetPassword = () => {
             <h2 className="text-second font-semibold tracking-wide">
               Set your password
             </h2>
-
-            <div className="relative">
-              <input required type="text" className=" custom-input" />
-              <label htmlFor="" className="custom-label ">
-                Current Password
-              </label>
-            </div>
-
-            <div className="relative">
-              <input required type="text" className=" custom-input" />
-              <label htmlFor="" className="custom-label ">
-                Password
-              </label>
-            </div>
-            <div className="relative">
-              <input required type="text" className=" custom-input" />
-              <label htmlFor="" className="custom-label ">
-                Change Password
-              </label>
-            </div>
+            <PasswordInput
+              label="Current Password"
+              icon="ic:sharp-key"
+              passwordClosedIcon="ic:sharp-key-off"
+            />
+            <PasswordInput
+              label="Password"
+              icon="ic:sharp-key"
+              passwordClosedIcon="ic:sharp-key-off"
+            />
+            <PasswordInput
+              label="Confirm Password"
+              icon="ic:sharp-key"
+              passwordClosedIcon="ic:sharp-key-off"
+            />
           </div>
 
           <div className="w-full mt-7  ">
-            <button className=" block main_btn main_btn_color  py-[0.85rem] text-white text-sm w-full capitalize tracking-widest hover:-translate-y-1 transition duration-200 hover:shadow-lg  ">
+            <button className=" block main_btn main_btn_color  py-[0.85rem] text-white text-sm w-full capitalize tracking-widest hover:-translate-y-1 transition duration-200 hover:shadow-lg  " onClick={changePassword}>
               Change password
             </button>
           </div>

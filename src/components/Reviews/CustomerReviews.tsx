@@ -15,7 +15,7 @@ const CustomerReviews = () => {
                 <div
                   className={` ${i < 1 ? "hidden md:block" : "md:block"}
                   ${i === 0 || i === 2 ? "md:mt-10 " : " h-fit mt-0"}
-                 rounded-xl card-shadow  p-4 bg-[#FFFFFF] transition duration-200  hover:-translate-y-2 hover:shadow-md z-40`}
+                 rounded-xl card-shadow-2  p-4 bg-[#FFFFFF] transition duration-200   z-40`}
                   key={i}
                 >
                   <div className="flex gap-2">
@@ -252,7 +252,7 @@ const CustomerReviews = () => {
             <div
               className={` 
           
-                 rounded-xl card-shadow  p-4 bg-[#FFFFFF] transition duration-200  hover:-translate-y-2 hover:shadow-md`}
+                 rounded-xl card-shadow  p-4 bg-[#FFFFFF] transition duration-200  card-shadow-2 shadow`}
             >
               <div className="flex gap-2">
                 <div className="w-8 h-8 hover:scale-[1.1] transition">

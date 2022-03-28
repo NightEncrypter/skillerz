@@ -3,7 +3,7 @@ import React from "react";
 export const MobHomeSvg = () => {
   return (
     <svg
-      className="w-full h-full"
+      className="w-full h-full sm:hidden"
       viewBox="0 0 316 206"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

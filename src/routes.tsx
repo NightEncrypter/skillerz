@@ -6,6 +6,7 @@ import CandidateOptions from "./components/Pages/candidates/CandidateOptions";
 import CookiesPolicies from "./components/Pages/candidates/CookiesPolicies";
 import ForgotPassword from "./components/Pages/candidates/ForgotPassword";
 import SetPassword from "./components/Pages/candidates/SetPassword";
+import UploadResume from "./components/Pages/candidates/UploadResume";
 import Choose from "./components/Pages/Choose/Choose";
 
 import Courses from "./components/Pages/Courses";
@@ -33,6 +34,10 @@ export const routes: RouteObject[] = [
       {
         path: "/candidates/login",
         element: <CandidateLogin />,
+      },
+      {
+        path: "/candidates/resume",
+        element: <UploadResume />,
       },
       {
         path: "/candidates/email_verification",

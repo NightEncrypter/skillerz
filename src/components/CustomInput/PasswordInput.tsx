@@ -1,7 +1,7 @@
 import { Icon } from "@iconify/react";
 import { useState } from "react";
 
-const CustomInput = ({
+const PasswordInput = ({
   label,
   icon,
   passwordClosedIcon,
@@ -35,4 +35,4 @@ const CustomInput = ({
   );
 };
 
-export default CustomInput;
+export default PasswordInput;

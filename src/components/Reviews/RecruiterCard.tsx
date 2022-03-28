@@ -4,8 +4,8 @@ import Smile from "../../assets/img/smile.png";
 const RecruiterCard = () => {
   return (
     <div className="my-6">
-      <h2 className="font-semibold text-blue-700 w-fit  border-blue-200 border-b-[0.2px]">
-        Recruiter FeedBacks
+      <h2 className="md:text-2xl my-4 mb-8 text-[#0069E7] font-medium border-b-[0.1px]  border-blue-300 w-fit text-sm">
+        Recruiters Feedback
       </h2>
       <div className="md:flex justify-between w-full my-8 items-center  ">
         <div className="md:w-[20%] mb-8 sm:mb-0">
