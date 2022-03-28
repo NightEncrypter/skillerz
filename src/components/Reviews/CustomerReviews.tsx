@@ -92,7 +92,7 @@ const CustomerReviews = () => {
               ))}
             </div>
 
-            <div className=" flex flex-col  justify-center items-center  relative -top-[10rem] md:-top-[10rem] z-[1]   ">
+            <div className=" flex flex-col  justify-center items-center  relative -top-[7rem] md:-top-[10rem] z-[1]   ">
               <Earth />
 
               <div className="absolute md:top-[13rem] top-[7rem] md:right-[40%] right-[25%] z-20">
