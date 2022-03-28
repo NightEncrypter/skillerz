@@ -95,8 +95,8 @@ const CustomerReviews = () => {
             <div className=" flex flex-col  justify-center items-center  relative -top-[10rem] md:-top-[10rem] z-[1]   ">
               <Earth />
 
-              <div className="absolute md:top-[13rem] top-40 md:right-[40%] right-[25%] z-20">
-                <div className=" w-8 h-8 relative  hover:scale-105 transition hover:-translate-y-1">
+              <div className="absolute md:top-[13rem] top-32 md:right-[40%] right-[25%] z-20">
+                <div className=" w-5 h-5 sm:w-8 sm:h-8 relative  hover:scale-105 transition hover:-translate-y-1">
                   <Icon
                     icon="carbon:location-filled"
                     color="orange"
@@ -105,12 +105,12 @@ const CustomerReviews = () => {
                   <img
                     src={Smile}
                     alt=""
-                    className="rounded-full p-1 w-6 h-6 absolute top-0 left-1"
+                    className="rounded-full p-1 sm:w-6 sm:h-6 h-5 w-5 absolute -top-[0.15rem] left-0 "
                   />
                 </div>
               </div>
-              <div className="absolute md:left-[20%] md:top-[12rem] top-40 left-[5%] z-20">
-                <div className=" w-8 h-8 relative  hover:scale-105 transition hover:-translate-y-1 ">
+              <div className="absolute md:left-[20%] md:top-[12rem] top-32 left-[5%] z-20">
+                <div className=" w-5 h-5 sm:w-8 sm:h-8 relative  hover:scale-105 transition hover:-translate-y-1 ">
                   <Icon
                     icon="carbon:location-filled"
                     color="orange"
@@ -119,13 +119,13 @@ const CustomerReviews = () => {
                   <img
                     src={Smile}
                     alt=""
-                    className="rounded-full p-1 w-6 h-6 absolute top-0 left-1"
+                    className="rounded-full p-1 sm:w-6 sm:h-6 h-5 w-5 absolute -top-[0.15rem] left-0 "
                   />
                 </div>
               </div>
 
-              <div className="absolute md:left-[35%] md:top-28 top-36 left-[25%] z-20">
-                <div className=" w-10 h-10 relative  hover:scale-105 transition hover:-translate-y-1">
+              <div className="absolute md:left-[35%] md:top-28 top-32 left-[25%] z-20">
+                <div className=" sm:w-10 sm:h-10 w-8 h-8  relative  hover:scale-105 transition hover:-translate-y-1">
                   <Icon
                     icon="carbon:location-filled"
                     color="blue"
@@ -134,11 +134,11 @@ const CustomerReviews = () => {
                   <img
                     src={Smile}
                     alt=""
-                    className="rounded-full p-1 w-7 h-7 absolute top-1 left-[0.4rem]"
+                    className="rounded-full p-1 w-7 h-7 absolute top-[0.05rem] sm:left-[0.4rem] left-[0.10rem]"
                   />
                 </div>
               </div>
-              <div className="absolute right-[5%]  top-[10rem]  sm:top-[13rem] sm:right-[25%] z-20">
+              <div className="absolute right-[5%]  top-[7.5rem]  sm:top-[13rem] sm:right-[25%] z-20">
                 <div className=" w-10 h-10 relative  hover:scale-105 transition hover:-translate-y-1">
                   <Icon
                     icon="carbon:location-filled"
