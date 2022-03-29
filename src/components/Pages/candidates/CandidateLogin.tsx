@@ -3,8 +3,9 @@ import { ChangeEvent } from "react";
 import { Link } from "react-router-dom";
 import CustomInput from "../../CustomInput/CustomInput";
 import PasswordInput from "../../CustomInput/PasswordInput";
-import HomeLogoLink from "../../logoLinks/HomeLogoLink";
+// import HomeLogoLink from "../../logoLinks/HomeLogoLink";
 import HomeLogo1 from "../../svgs/HomeLogo1";
+import LogoSvg from "../../svgs/logoSvg";
 const CandidateLogin = () => {
   const handlerChange = (e: ChangeEvent<HTMLInputElement>) => {
     console.log(e);
@@ -23,9 +24,9 @@ const CandidateLogin = () => {
             </div>
           </h2>
 
-          <div className=" flex flex-col justify-center items-center mt-6    ">
-            {/* <LogoSvg height={"80"} /> */}
-            <HomeLogoLink height="80" className=" mb-8" />
+          <div className=" flex flex-col justify-center items-center mt-4    ">
+            <LogoSvg className="w-[11rem] h-24" />
+            {/* <HomeLogoLink height="40" className=" mb-8" /> */}
             <div className="w-full m ">
               <div className="flex flex-col gap-5 mb-5 ">
                 <CustomInput

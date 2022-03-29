@@ -13,9 +13,9 @@ const CandidateOptions = () => {
 
   return (
     <div className="px-8 bg-[#F4FAFF]  py-2 h-full sm:min-h-0 min-h-screen ">
-      <LogoSvg height="100" />
-
       <div className=" flex flex-col justify-center items-center  gap-2 ">
+        <LogoSvg className="w-[15rem] h-32 mt-4" />
+
         <div className="w-full ">
           <OptionsPageSvg />
 

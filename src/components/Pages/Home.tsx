@@ -18,7 +18,7 @@ import CustomerReviews from "../Reviews/CustomerReviews";
 import HomeCaraousel from "../caraousels/HomeCaraousel";
 import LandingSvg from "../svgs/LandingSvg";
 import Smile from "../../assets/img/smile.png";
-import HomeLogoLink from "../logoLinks/HomeLogoLink";
+// import HomeLogoLink from "../logoLinks/HomeLogoLink";
 import RecruiterCard from "../Reviews/RecruiterCard";
 import { MobHomeSvg } from "../svgs/MobHomeSvg";
 
@@ -47,9 +47,9 @@ const Home = () => {
           "overflow-auto": ham,
         })}
       >
-        <header className="sticky  top-0 left-0 right-0  flex justify-between items-center px-4 md:hidden ">
+        <header className="sticky  top-0 left-0 right-0  flex justify-between items-center px-4 md:hidden py-2  ">
           <div className="w-[28px] h-[28px] sm:hidden z-50"></div>
-          <LogoSvg height={"60"} />
+          <LogoSvg />
           <button
             onClick={() => setHam((prev) => !prev)}
             className={cn("transition duration-200  hamAnim md:hidden ", {})}
@@ -80,9 +80,9 @@ const Home = () => {
             designed to flip recruitment table
           </div>
         </h2>
-        <header className=" md-container-7x  sm:hidden md:block ">
-          <div className=" sm:flex item-center justify-between px-10 w-full h-[72px] bg-[#F4FAFF] hidden">
-            <HomeLogoLink className="  h-14 inline-block mt-4" />
+        <header className=" md-container-7x  sm:hidden md:block  ">
+          <div className=" sm:flex item-center justify-between px-10 w-full h-[72px] bg-transparent hidden">
+            <LogoSvg className="block " />
 
             <nav className="w-[35%] flex items-center ml-auto ">
               <ul className="flex justify-between items-center  w-full">

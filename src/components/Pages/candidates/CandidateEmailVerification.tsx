@@ -2,8 +2,9 @@ import { Icon } from "@iconify/react";
 import React, { ChangeEvent, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import cn from "classnames";
-import HomeLogoLink from "../../logoLinks/HomeLogoLink";
+// import HomeLogoLink from "../../logoLinks/HomeLogoLink";
 import CustomInput from "../../CustomInput/CustomInput";
+import LogoSvg from "../../svgs/logoSvg";
 const CandidateEmailVerification = () => {
   const [openModal, setModal] = useState<boolean>(false);
   const [toggle, setToggle] = useState<boolean>(false);
@@ -33,7 +34,8 @@ const CandidateEmailVerification = () => {
         </h2>
 
         <div className=" flex flex-col justify-center items-center  gap-2 mt-4 ">
-          <HomeLogoLink height="80" className={"mb-8"} />
+          <LogoSvg className="w-[12rem] h-28" />
+
           <div className="w-full m ">
             <div className="flex flex-col gap-5 mb-5">
               <CustomInput

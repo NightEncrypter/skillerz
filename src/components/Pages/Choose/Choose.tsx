@@ -19,7 +19,7 @@ const Choose = () => {
       <div className="flex justify-around w-full mt-6 ">
         <input
           type="radio"
-          name="candidates"
+          name="official"
           id="candidate"
           value={"candidate"}
           //   onChange={()=>}
@@ -30,14 +30,14 @@ const Choose = () => {
           htmlFor="candidate"
         >
           <Candidate />
-          <h5 className="mt-4 towards-down text-sm font-medium text-linked-in">
+          <h5 className="mt-4 text-center towards-down text-sm font-medium text-linked-in">
             Candidate
           </h5>
         </label>
 
         <input
           type="radio"
-          name="recruiter"
+          name="official"
           id="recruiter"
           value={"Recruiter"}
           className="absolute opacity-0"
@@ -47,7 +47,7 @@ const Choose = () => {
           className="card p-6 hover:bg-[#F2CBFF] ease-in bg-white rounded-2xl shadow-md transition duration-200 hover:shadow-xl"
         >
           <Recruiter />
-          <h5 className="mt-4 towards-down  text-sm font-medium text-purple-900">
+          <h5 className="mt-4 towards-down text-center  text-sm font-medium text-purple-900">
             Recruiter
           </h5>
         </label>
