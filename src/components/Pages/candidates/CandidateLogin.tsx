@@ -11,7 +11,7 @@ const CandidateLogin = () => {
     console.log(e);
   };
   return (
-    <div className="px-6 bg-[#F4FAFF]  py-4 h-full sm:min-h-0 min-h-screen  ">
+    <div className="px-8 bg-[#F4FAFF]  py-4 h-full sm:min-h-0 min-h-screen  ">
       <div className="md:flex md:mx-auto md:max-w-7xl justify-between items-center ">
         <div className="md:w-[35%] sm:w-[45%] w-full">
           <h2 className="flex  flex-wrap  ">
