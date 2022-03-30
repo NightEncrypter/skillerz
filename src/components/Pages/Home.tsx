@@ -82,8 +82,8 @@ const Home = () => {
             designed to flip recruitment table
           </div>
         </h2>
-        <header className=" sticky top-0 left-0 right-0 md-container-7x  sm:hidden md:block w-full  ">
-          <div className=" sm:flex  justify-between  w-full h-[72px] bg-transparent hidden">
+        <header className=" sticky top-0 left-0 right-0 md-container-7x  sm:hidden md:block w-full    ">
+          <div className=" sm:flex  justify-between  w-full h-[80px] bg-transparent hidden items-center">
             <DesktopLogo />
             {/* <LogoSvg className="inline-block h-full  " /> */}
             {/* <HomeLogo1 /> */}
