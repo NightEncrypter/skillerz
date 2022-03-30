@@ -21,6 +21,8 @@ import Smile from "../../assets/img/smile.png";
 // import HomeLogoLink from "../logoLinks/HomeLogoLink";
 import RecruiterCard from "../Reviews/RecruiterCard";
 import { MobHomeSvg } from "../svgs/MobHomeSvg";
+// import HomeLogo1 from "../svgs/HomeLogo1";
+import DesktopLogo from "../svgs/DesktopLogo";
 
 const Home = () => {
   const [openModal, setModal] = useState<boolean>(true);
@@ -68,7 +70,7 @@ const Home = () => {
         </header>
 
         {/* HEADINGS */}
-        <h2 className="px-4 md:px-10 flex  flex-wrap my-6 sm:hidden  ">
+        <h2 className="px-4 md:px-4 flex  flex-wrap my-6 sm:hidden  ">
           <div className=" font-medium text-[#7C00A7] text-2xl tracking-wide w-full  ">
             RecruiterX is a
           </div>
@@ -80,10 +82,11 @@ const Home = () => {
             designed to flip recruitment table
           </div>
         </h2>
-        <header className=" md-container-7x  sm:hidden md:block  ">
-          <div className=" sm:flex item-center justify-between px-10 w-full h-[72px] bg-transparent hidden">
-            <LogoSvg className="block " />
-
+        <header className=" sticky top-0 left-0 right-0 md-container-7x  sm:hidden md:block w-full  ">
+          <div className=" sm:flex  justify-between  w-full h-[72px] bg-transparent hidden">
+            <DesktopLogo />
+            {/* <LogoSvg className="inline-block h-full  " /> */}
+            {/* <HomeLogo1 /> */}
             <nav className="w-[35%] flex items-center ml-auto ">
               <ul className="flex justify-between items-center  w-full">
                 <li>
