@@ -2,12 +2,27 @@ import CookiepolicyLogo from "../../svgs/CookiepolicyLogo";
 import cn from "classnames";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import CookiesHomeLogo from "../../svgs/CookiesHomeLogo";
+import CustomToggle from "../../CustomToggles/CustomToggle";
 
 const CookiesPolicies = () => {
   const [toggle, setToggle] = useState<{ essential: boolean; exp: boolean }>({
     essential: false,
     exp: false,
   });
+
+  const essentialFunc = () => {
+    setToggle({
+      ...toggle,
+      essential: !toggle.essential,
+    });
+  };
+  const expFunc = () => {
+    setToggle({
+      ...toggle,
+      exp: !toggle.exp,
+    });
+  };
   const navigation = useNavigate();
   const policies = [
     {
@@ -35,19 +50,9 @@ const CookiesPolicies = () => {
   };
   return (
     <div className="px-8">
-      <svg
-        height="70"
-        viewBox="0 0 155 124"
-        className="w-full mt-4 "
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path d="M56.6087 0L105.633 93H7.58413L56.6087 0Z" fill="#5E3434" />
-        <path
-          d="M115.913 28.3044L149.763 93.0001H82.0628L115.913 28.3044Z"
-          fill="#C78976"
-        />
-      </svg>
+      <div className="flex justify-center">
+        <CookiesHomeLogo />
+      </div>
       <CookiepolicyLogo />
 
       <div className="">
@@ -64,54 +69,22 @@ const CookiesPolicies = () => {
       {/* Toggles */}
       <div className=" space-y-4">
         <div className="flex gap-2 items-center">
-          <button
-            className={cn("w-[3rem] h-6 rounded-xl block", {
-              "bg-[#482020]": toggle.essential,
-              "bg-[#736363]": !toggle.essential,
-            })}
-            onClick={() => {
-              setToggle({
-                ...toggle,
-                essential: !toggle.essential,
-              });
-            }}
-          >
-            <div
-              className={cn(
-                "w-4 h-4 rounded-xl bg-gray-300 transition duration-200 ease-in",
-                {
-                  "ml-auto mr-1 bg-gray-50": toggle.essential,
-                  "ml-1": !toggle.essential,
-                }
-              )}
-            ></div>
-          </button>
+          <CustomToggle
+            dimColor="bg-[#736363]"
+            brightColor="bg-[#482020]"
+            toggleSet={essentialFunc}
+            toggleBoolean={toggle.essential}
+          />
 
           <p className="text-xs font-semibold">Accept the essentials cookies</p>
         </div>
         <div className="flex gap-2 items-center">
-          <button
-            className={cn("w-[3rem] h-6 rounded-xl block", {
-              "bg-[#482020]": toggle.exp,
-              "bg-[#736363]": !toggle.exp,
-            })}
-            onClick={() => {
-              setToggle({
-                ...toggle,
-                exp: !toggle.exp,
-              });
-            }}
-          >
-            <div
-              className={cn(
-                "w-4 h-4 rounded-xl bg-gray-300 transition duration-200 ease-in",
-                {
-                  "ml-auto mr-1 bg-gray-50": toggle.exp,
-                  "ml-1": !toggle.exp,
-                }
-              )}
-            ></div>
-          </button>
+          <CustomToggle
+            dimColor="bg-[#736363]"
+            brightColor="bg-[#482020]"
+            toggleSet={expFunc}
+            toggleBoolean={toggle.exp}
+          />
 
           <p className="text-xs font-semibold">
             Accept cookies to improve my experience

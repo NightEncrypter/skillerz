@@ -12,6 +12,8 @@ import Choose from "./components/Pages/Choose/Choose";
 import Courses from "./components/Pages/Courses";
 import Home from "./components/Pages/Home";
 import MainCourse from "./components/Pages/MainCourse";
+import Candidates from "./components/Pages/main_candidate/Candidates";
+import CandidateHome from "./components/Pages/main_candidate/candidates_pages/CandidatesHome";
 import NoPage from "./components/Pages/NoPage";
 
 export const routes: RouteObject[] = [
@@ -22,6 +24,21 @@ export const routes: RouteObject[] = [
       {
         index: true,
         element: <Home />,
+      },
+
+      {
+        path: "/main_candidates",
+        element: <Candidates />,
+        children: [
+          {
+            index: true,
+            element: <CandidateHome />,
+          },
+          {
+            path: "resume",
+            element: <UploadResume />,
+          },
+        ],
       },
       {
         element: <Choose />,
@@ -35,10 +52,7 @@ export const routes: RouteObject[] = [
         path: "/candidates/login",
         element: <CandidateLogin />,
       },
-      {
-        path: "/candidates/resume",
-        element: <UploadResume />,
-      },
+
       {
         path: "/candidates/email_verification",
         element: <CandidateEmailVerification />,

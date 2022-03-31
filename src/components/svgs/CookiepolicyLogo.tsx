@@ -3,10 +3,10 @@ import React from "react";
 const CookiepolicyLogo = () => {
   return (
     <svg
-      height="70"
+      height="55"
       viewBox="0 0 346 83"
       fill="none"
-      className="w-full"
+      className="w-full mt-4"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path

@@ -1,7 +1,7 @@
 import { Icon } from "@iconify/react";
 import { useNavigate } from "react-router-dom";
 import PasswordInput from "../../CustomInput/PasswordInput";
-import HomeLogoLink from "../../logoLinks/HomeLogoLink";
+import LogoSvg from "../../svgs/logoSvg";
 
 const SetPassword = () => {
   const navigation = useNavigate();
@@ -10,7 +10,7 @@ const SetPassword = () => {
     navigation(-1);
   };
   const changePassword = () => {
-    navigation('/candidates/resume');
+    navigation("/candidates/resume");
   };
   return (
     <div className="px-8 bg-[#F4FAFF]  py-2 h-full sm:min-h-0 min-h-screen ">
@@ -25,7 +25,7 @@ const SetPassword = () => {
         </div>
       </h2>
       <div className="flex justify-center mt-4">
-        <HomeLogoLink height={"80"} className=" inline-block h-20 w-20   " />
+        <LogoSvg className="w-[12rem] h-28" />
       </div>
 
       <div className=" flex flex-col justify-center items-center  gap-2 mt-5 ">
@@ -52,7 +52,10 @@ const SetPassword = () => {
           </div>
 
           <div className="w-full mt-7  ">
-            <button className=" block main_btn main_btn_color  py-[0.85rem] text-white text-sm w-full capitalize tracking-widest hover:-translate-y-1 transition duration-200 hover:shadow-lg  " onClick={changePassword}>
+            <button
+              className=" block main_btn main_btn_color  py-[0.85rem] text-white text-sm w-full capitalize tracking-widest hover:-translate-y-1 transition duration-200 hover:shadow-lg  "
+              onClick={changePassword}
+            >
               Change password
             </button>
           </div>

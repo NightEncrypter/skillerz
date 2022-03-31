@@ -295,7 +295,9 @@ input:focus ~ .input-icon > .input-icon {
 }
 
 .upload-box-shadow {
-  box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.06);
+  /* box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.06); */
+  box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.1);
+  border-radius: 32px;
 }
 .upload-box-shadow-bottom {
   box-shadow: 0px 10px 18px rgba(0, 0, 0, 0.08);
@@ -311,3 +313,14 @@ input:focus ~ .input-icon > .input-icon {
 .card-3:hover {
   transform: scale(1.01) translateY(-10px);
 }
+
+/* .border-spacing {
+  background-image: linear-gradient(
+    to right,
+    black 33%,
+    rgba(255, 255, 255, 0) 0%
+  );
+  background-position: bottom;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+} */

@@ -5,6 +5,7 @@ import cn from "classnames";
 // import HomeLogoLink from "../../logoLinks/HomeLogoLink";
 import CustomInput from "../../CustomInput/CustomInput";
 import LogoSvg from "../../svgs/logoSvg";
+import CustomToggle from "../../CustomToggles/CustomToggle";
 const CandidateEmailVerification = () => {
   const [openModal, setModal] = useState<boolean>(false);
   const [toggle, setToggle] = useState<boolean>(false);
@@ -19,6 +20,10 @@ const CandidateEmailVerification = () => {
 
   const handlerChange = (e: ChangeEvent<HTMLInputElement>) => {
     console.log(e);
+  };
+  const changeToggle = () => {
+    setToggle((prev) => !prev);
+    // console.log(toggle);
   };
   return (
     <>
@@ -140,26 +145,12 @@ const CandidateEmailVerification = () => {
           }
         )}
       >
-        <button
-          className={cn("w-[4.7rem] h-6 rounded-xl", {
-            "bg-blue-700 shadow-xl": toggle,
-            "bg-blue-900": !toggle,
-          })}
-          onClick={() => {
-            setToggle((prev) => !prev);
-            console.log(toggle);
-          }}
-        >
-          <div
-            className={cn(
-              "w-4 h-4 rounded-xl bg-gray-400 transition duration-200",
-              {
-                "ml-auto mr-1 bg-gray-100": toggle,
-                "ml-1": !toggle,
-              }
-            )}
-          ></div>
-        </button>
+        <CustomToggle
+          dimColor="bg-blue-900"
+          brightColor="bg-blue-700 shadow-xl"
+          toggleBoolean={toggle}
+          toggleSet={changeToggle}
+        />
         <p className="text-white text-xs tracking-wider font-light">
           By clicking on this button you agree to our terms of services and
           privacy policy

@@ -23,6 +23,7 @@ import RecruiterCard from "../Reviews/RecruiterCard";
 import { MobHomeSvg } from "../svgs/MobHomeSvg";
 // import HomeLogo1 from "../svgs/HomeLogo1";
 import DesktopLogo from "../svgs/DesktopLogo";
+import CustomButtonHome from "../CustomButtons/CustomButtonHome";
 
 const Home = () => {
   const [openModal, setModal] = useState<boolean>(true);
@@ -201,12 +202,17 @@ const Home = () => {
         </div>
         {/* <HomeLogo1 /> */}
         <div className="flex justify-center mb-8     ">
-          <button
+          {/* <button
             className=" w-[50%] block main_btn main_btn_color  py-[0.60rem] text-white text-sm  capitalize tracking-widest hover:-translate-y-2  shadow1 transition duration-200 btn-animation sm:hidden"
             onClick={redirect_to_login}
           >
             Let's give us Try
-          </button>
+          </button> */}
+          <CustomButtonHome
+            className="sm:hidden"
+            buttonLabel="Let's give us Try"
+            buttonFunc={redirect_to_login}
+          />
         </div>
         {/* WIDTH INFO */}
         <div className="w-full flex gap-3 justify-between items-center p-4 px-4  bg-[#D3E7FF]  mt-4 sm:hidden">
