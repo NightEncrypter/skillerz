@@ -10,7 +10,7 @@ const SetPassword = () => {
     navigation(-1);
   };
   const changePassword = () => {
-    navigation("/candidates/resume");
+    navigation("/main_candidates/resume");
   };
   return (
     <div className="px-8 bg-[#F4FAFF]  py-2 h-full sm:min-h-0 min-h-screen ">
