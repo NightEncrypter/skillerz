@@ -13,6 +13,7 @@ import Courses from "./components/Pages/Courses";
 import Home from "./components/Pages/Home";
 import MainCourse from "./components/Pages/MainCourse";
 import Candidates from "./components/Pages/main_candidate/Candidates";
+import CandidatesEducations from "./components/Pages/main_candidate/CandidatesEducations";
 import CandidateHome from "./components/Pages/main_candidate/candidates_pages/CandidatesHome";
 import NoPage from "./components/Pages/NoPage";
 
@@ -37,6 +38,10 @@ export const routes: RouteObject[] = [
           {
             path: "resume",
             element: <UploadResume />,
+          },
+          {
+            path: "education",
+            element: <CandidatesEducations />,
           },
         ],
       },

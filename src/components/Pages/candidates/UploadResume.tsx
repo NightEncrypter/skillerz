@@ -16,7 +16,7 @@ const UploadResume = () => {
     navigation(-1);
   };
   const changePassword = () => {
-    navigation("/candidates/resume");
+    navigation("/main_candidates/education");
   };
 
   const extractFile = (e: ChangeEvent<HTMLInputElement>) => {

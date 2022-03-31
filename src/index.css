@@ -324,3 +324,7 @@ input:focus ~ .input-icon > .input-icon {
   background-size: 10px 1px;
   background-repeat: repeat-x;
 } */
+
+.education-card {
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.06);
+}
